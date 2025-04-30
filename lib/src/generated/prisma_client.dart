@@ -66,7 +66,7 @@ class UserWhereInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'AND': AND,'OR': OR,'NOT': NOT,'id': id,'username': username,'email': email,'password': password,'tasks': tasks
+    'AND': AND,'OR': OR,'NOT': NOT,'id': id,'username': username,'email': email,'password': password,'tasks': tasks,
   };
 
 }
@@ -92,7 +92,7 @@ class UserOrderByWithRelationInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'id': id,'username': username,'email': email,'password': password,'tasks': tasks
+    'id': id,'username': username,'email': email,'password': password,'tasks': tasks,
   };
 
 }
@@ -112,7 +112,7 @@ class UserWhereUniqueInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'id': id,'email': email
+    'id': id,'email': email,
   };
 
 }
@@ -146,7 +146,7 @@ class UserOrderByWithAggregationInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'id': id,'username': username,'email': email,'password': password,'_count': $count,'_avg': $avg,'_max': $max,'_min': $min,'_sum': $sum
+    'id': id,'username': username,'email': email,'password': password,'_count': $count,'_avg': $avg,'_max': $max,'_min': $min,'_sum': $sum,
   };
 
 }
@@ -176,7 +176,7 @@ class UserScalarWhereWithAggregatesInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'AND': AND,'OR': OR,'NOT': NOT,'id': id,'username': username,'email': email,'password': password
+    'AND': AND,'OR': OR,'NOT': NOT,'id': id,'username': username,'email': email,'password': password,
   };
 
 }
@@ -214,7 +214,7 @@ class TaskWhereInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'AND': AND,'OR': OR,'NOT': NOT,'id': id,'title': title,'description': description,'completed': completed,'createdAt': createdAt,'updatedAt': updatedAt,'userId': userId,'user': user
+    'AND': AND,'OR': OR,'NOT': NOT,'id': id,'title': title,'description': description,'completed': completed,'createdAt': createdAt,'updatedAt': updatedAt,'userId': userId,'user': user,
   };
 
 }
@@ -246,7 +246,7 @@ class TaskOrderByWithRelationInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'id': id,'title': title,'description': description,'completed': completed,'createdAt': createdAt,'updatedAt': updatedAt,'userId': userId,'user': user
+    'id': id,'title': title,'description': description,'completed': completed,'createdAt': createdAt,'updatedAt': updatedAt,'userId': userId,'user': user,
   };
 
 }
@@ -264,7 +264,7 @@ class TaskWhereUniqueInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'id': id
+    'id': id,
   };
 
 }
@@ -304,7 +304,7 @@ class TaskOrderByWithAggregationInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'id': id,'title': title,'description': description,'completed': completed,'createdAt': createdAt,'updatedAt': updatedAt,'userId': userId,'_count': $count,'_avg': $avg,'_max': $max,'_min': $min,'_sum': $sum
+    'id': id,'title': title,'description': description,'completed': completed,'createdAt': createdAt,'updatedAt': updatedAt,'userId': userId,'_count': $count,'_avg': $avg,'_max': $max,'_min': $min,'_sum': $sum,
   };
 
 }
@@ -340,7 +340,7 @@ class TaskScalarWhereWithAggregatesInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'AND': AND,'OR': OR,'NOT': NOT,'id': id,'title': title,'description': description,'completed': completed,'createdAt': createdAt,'updatedAt': updatedAt,'userId': userId
+    'AND': AND,'OR': OR,'NOT': NOT,'id': id,'title': title,'description': description,'completed': completed,'createdAt': createdAt,'updatedAt': updatedAt,'userId': userId,
   };
 
 }
@@ -364,7 +364,7 @@ class UserCreateInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'username': username,'email': email,'password': password,'tasks': tasks
+    'username': username,'email': email,'password': password,'tasks': tasks,
   };
 
 }
@@ -372,10 +372,7 @@ class UserCreateInput implements runtime.JsonSerializable {
 class UserUncheckedCreateInput implements runtime.JsonSerializable {
     const UserUncheckedCreateInput(
 {
-    this.id,
-    required this.username,
-    required this.email,
-    required this.password,
+    required this.username, required this.email, required this.password, this.id,
     this.tasks,
 }
  );
@@ -390,7 +387,7 @@ class UserUncheckedCreateInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'id': id,'username': username,'email': email,'password': password,'tasks': tasks
+    'id': id,'username': username,'email': email,'password': password,'tasks': tasks,
   };
 
 }
@@ -414,7 +411,7 @@ class UserUpdateInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'username': username,'email': email,'password': password,'tasks': tasks
+    'username': username,'email': email,'password': password,'tasks': tasks,
   };
 
 }
@@ -440,7 +437,7 @@ class UserUncheckedUpdateInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'id': id,'username': username,'email': email,'password': password,'tasks': tasks
+    'id': id,'username': username,'email': email,'password': password,'tasks': tasks,
   };
 
 }
@@ -448,10 +445,7 @@ class UserUncheckedUpdateInput implements runtime.JsonSerializable {
 class UserCreateManyInput implements runtime.JsonSerializable {
     const UserCreateManyInput(
 {
-    this.id,
-    required this.username,
-    required this.email,
-    required this.password,
+    required this.username, required this.email, required this.password, this.id,
 }
  );
 
@@ -464,7 +458,7 @@ class UserCreateManyInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'id': id,'username': username,'email': email,'password': password
+    'id': id,'username': username,'email': email,'password': password,
   };
 
 }
@@ -486,7 +480,7 @@ class UserUpdateManyMutationInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'username': username,'email': email,'password': password
+    'username': username,'email': email,'password': password,
   };
 
 }
@@ -510,7 +504,7 @@ class UserUncheckedUpdateManyInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'id': id,'username': username,'email': email,'password': password
+    'id': id,'username': username,'email': email,'password': password,
   };
 
 }
@@ -520,10 +514,9 @@ class TaskCreateInput implements runtime.JsonSerializable {
 {
     required this.title,
     required this.description,
-    this.completed,
+    required this.user, this.completed,
     this.createdAt,
     this.updatedAt,
-    required this.user,
 }
  );
 
@@ -538,7 +531,7 @@ class TaskCreateInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'title': title,'description': description,'completed': completed,'createdAt': createdAt,'updatedAt': updatedAt,'user': user
+    'title': title,'description': description,'completed': completed,'createdAt': createdAt,'updatedAt': updatedAt,'user': user,
   };
 
 }
@@ -546,13 +539,10 @@ class TaskCreateInput implements runtime.JsonSerializable {
 class TaskUncheckedCreateInput implements runtime.JsonSerializable {
     const TaskUncheckedCreateInput(
 {
-    this.id,
-    required this.title,
-    required this.description,
+    required this.title, required this.description, required this.userId, this.id,
     this.completed,
     this.createdAt,
     this.updatedAt,
-    required this.userId,
 }
  );
 
@@ -568,7 +558,7 @@ class TaskUncheckedCreateInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'id': id,'title': title,'description': description,'completed': completed,'createdAt': createdAt,'updatedAt': updatedAt,'userId': userId
+    'id': id,'title': title,'description': description,'completed': completed,'createdAt': createdAt,'updatedAt': updatedAt,'userId': userId,
   };
 
 }
@@ -596,7 +586,7 @@ class TaskUpdateInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'title': title,'description': description,'completed': completed,'createdAt': createdAt,'updatedAt': updatedAt,'user': user
+    'title': title,'description': description,'completed': completed,'createdAt': createdAt,'updatedAt': updatedAt,'user': user,
   };
 
 }
@@ -626,7 +616,7 @@ class TaskUncheckedUpdateInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'id': id,'title': title,'description': description,'completed': completed,'createdAt': createdAt,'updatedAt': updatedAt,'userId': userId
+    'id': id,'title': title,'description': description,'completed': completed,'createdAt': createdAt,'updatedAt': updatedAt,'userId': userId,
   };
 
 }
@@ -634,13 +624,10 @@ class TaskUncheckedUpdateInput implements runtime.JsonSerializable {
 class TaskCreateManyInput implements runtime.JsonSerializable {
     const TaskCreateManyInput(
 {
-    this.id,
-    required this.title,
-    required this.description,
+    required this.title, required this.description, required this.userId, this.id,
     this.completed,
     this.createdAt,
     this.updatedAt,
-    required this.userId,
 }
  );
 
@@ -656,7 +643,7 @@ class TaskCreateManyInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'id': id,'title': title,'description': description,'completed': completed,'createdAt': createdAt,'updatedAt': updatedAt,'userId': userId
+    'id': id,'title': title,'description': description,'completed': completed,'createdAt': createdAt,'updatedAt': updatedAt,'userId': userId,
   };
 
 }
@@ -682,7 +669,7 @@ class TaskUpdateManyMutationInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'title': title,'description': description,'completed': completed,'createdAt': createdAt,'updatedAt': updatedAt
+    'title': title,'description': description,'completed': completed,'createdAt': createdAt,'updatedAt': updatedAt,
   };
 
 }
@@ -712,7 +699,7 @@ class TaskUncheckedUpdateManyInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'id': id,'title': title,'description': description,'completed': completed,'createdAt': createdAt,'updatedAt': updatedAt,'userId': userId
+    'id': id,'title': title,'description': description,'completed': completed,'createdAt': createdAt,'updatedAt': updatedAt,'userId': userId,
   };
 
 }
@@ -744,7 +731,7 @@ class IntFilter implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'equals': equals,'in': in$,'notIn': notIn,'lt': lt,'lte': lte,'gt': gt,'gte': gte,'not': not
+    'equals': equals,'in': in$,'notIn': notIn,'lt': lt,'lte': lte,'gt': gt,'gte': gte,'not': not,
   };
 
 }
@@ -782,7 +769,7 @@ class StringFilter implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'equals': equals,'in': in$,'notIn': notIn,'lt': lt,'lte': lte,'gt': gt,'gte': gte,'contains': contains,'startsWith': startsWith,'endsWith': endsWith,'not': not
+    'equals': equals,'in': in$,'notIn': notIn,'lt': lt,'lte': lte,'gt': gt,'gte': gte,'contains': contains,'startsWith': startsWith,'endsWith': endsWith,'not': not,
   };
 
 }
@@ -804,7 +791,7 @@ class TaskListRelationFilter implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'every': every,'some': some,'none': none
+    'every': every,'some': some,'none': none,
   };
 
 }
@@ -822,7 +809,7 @@ class TaskOrderByRelationAggregateInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    '_count': $count
+    '_count': $count,
   };
 
 }
@@ -846,7 +833,7 @@ class UserCountOrderByAggregateInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'id': id,'username': username,'email': email,'password': password
+    'id': id,'username': username,'email': email,'password': password,
   };
 
 }
@@ -864,7 +851,7 @@ class UserAvgOrderByAggregateInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'id': id
+    'id': id,
   };
 
 }
@@ -888,7 +875,7 @@ class UserMaxOrderByAggregateInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'id': id,'username': username,'email': email,'password': password
+    'id': id,'username': username,'email': email,'password': password,
   };
 
 }
@@ -912,7 +899,7 @@ class UserMinOrderByAggregateInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'id': id,'username': username,'email': email,'password': password
+    'id': id,'username': username,'email': email,'password': password,
   };
 
 }
@@ -930,7 +917,7 @@ class UserSumOrderByAggregateInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'id': id
+    'id': id,
   };
 
 }
@@ -972,7 +959,7 @@ class IntWithAggregatesFilter implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'equals': equals,'in': in$,'notIn': notIn,'lt': lt,'lte': lte,'gt': gt,'gte': gte,'not': not,'_count': $count,'_avg': $avg,'_sum': $sum,'_min': $min,'_max': $max
+    'equals': equals,'in': in$,'notIn': notIn,'lt': lt,'lte': lte,'gt': gt,'gte': gte,'not': not,'_count': $count,'_avg': $avg,'_sum': $sum,'_min': $min,'_max': $max,
   };
 
 }
@@ -1016,7 +1003,7 @@ class StringWithAggregatesFilter implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'equals': equals,'in': in$,'notIn': notIn,'lt': lt,'lte': lte,'gt': gt,'gte': gte,'contains': contains,'startsWith': startsWith,'endsWith': endsWith,'not': not,'_count': $count,'_min': $min,'_max': $max
+    'equals': equals,'in': in$,'notIn': notIn,'lt': lt,'lte': lte,'gt': gt,'gte': gte,'contains': contains,'startsWith': startsWith,'endsWith': endsWith,'not': not,'_count': $count,'_min': $min,'_max': $max,
   };
 
 }
@@ -1036,7 +1023,7 @@ class BoolFilter implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'equals': equals,'not': not
+    'equals': equals,'not': not,
   };
 
 }
@@ -1068,7 +1055,7 @@ class DateTimeFilter implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'equals': equals,'in': in$,'notIn': notIn,'lt': lt,'lte': lte,'gt': gt,'gte': gte,'not': not
+    'equals': equals,'in': in$,'notIn': notIn,'lt': lt,'lte': lte,'gt': gt,'gte': gte,'not': not,
   };
 
 }
@@ -1088,7 +1075,7 @@ class UserRelationFilter implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'is': is$,'isNot': isNot
+    'is': is$,'isNot': isNot,
   };
 
 }
@@ -1118,7 +1105,7 @@ class TaskCountOrderByAggregateInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'id': id,'title': title,'description': description,'completed': completed,'createdAt': createdAt,'updatedAt': updatedAt,'userId': userId
+    'id': id,'title': title,'description': description,'completed': completed,'createdAt': createdAt,'updatedAt': updatedAt,'userId': userId,
   };
 
 }
@@ -1138,7 +1125,7 @@ class TaskAvgOrderByAggregateInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'id': id,'userId': userId
+    'id': id,'userId': userId,
   };
 
 }
@@ -1168,7 +1155,7 @@ class TaskMaxOrderByAggregateInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'id': id,'title': title,'description': description,'completed': completed,'createdAt': createdAt,'updatedAt': updatedAt,'userId': userId
+    'id': id,'title': title,'description': description,'completed': completed,'createdAt': createdAt,'updatedAt': updatedAt,'userId': userId,
   };
 
 }
@@ -1198,7 +1185,7 @@ class TaskMinOrderByAggregateInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'id': id,'title': title,'description': description,'completed': completed,'createdAt': createdAt,'updatedAt': updatedAt,'userId': userId
+    'id': id,'title': title,'description': description,'completed': completed,'createdAt': createdAt,'updatedAt': updatedAt,'userId': userId,
   };
 
 }
@@ -1218,7 +1205,7 @@ class TaskSumOrderByAggregateInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'id': id,'userId': userId
+    'id': id,'userId': userId,
   };
 
 }
@@ -1244,7 +1231,7 @@ class BoolWithAggregatesFilter implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'equals': equals,'not': not,'_count': $count,'_min': $min,'_max': $max
+    'equals': equals,'not': not,'_count': $count,'_min': $min,'_max': $max,
   };
 
 }
@@ -1282,7 +1269,7 @@ class DateTimeWithAggregatesFilter implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'equals': equals,'in': in$,'notIn': notIn,'lt': lt,'lte': lte,'gt': gt,'gte': gte,'not': not,'_count': $count,'_min': $min,'_max': $max
+    'equals': equals,'in': in$,'notIn': notIn,'lt': lt,'lte': lte,'gt': gt,'gte': gte,'not': not,'_count': $count,'_min': $min,'_max': $max,
   };
 
 }
@@ -1306,7 +1293,7 @@ class TaskCreateNestedManyWithoutUserInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'create': create,'connectOrCreate': connectOrCreate,'createMany': createMany,'connect': connect
+    'create': create,'connectOrCreate': connectOrCreate,'createMany': createMany,'connect': connect,
   };
 
 }
@@ -1330,7 +1317,7 @@ class TaskUncheckedCreateNestedManyWithoutUserInput implements runtime.JsonSeria
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'create': create,'connectOrCreate': connectOrCreate,'createMany': createMany,'connect': connect
+    'create': create,'connectOrCreate': connectOrCreate,'createMany': createMany,'connect': connect,
   };
 
 }
@@ -1348,7 +1335,7 @@ class StringFieldUpdateOperationsInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'set': set$
+    'set': set$,
   };
 
 }
@@ -1386,7 +1373,7 @@ class TaskUpdateManyWithoutUserNestedInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'create': create,'connectOrCreate': connectOrCreate,'upsert': upsert,'createMany': createMany,'set': set$,'disconnect': disconnect,'delete': delete,'connect': connect,'update': update,'updateMany': updateMany,'deleteMany': deleteMany
+    'create': create,'connectOrCreate': connectOrCreate,'upsert': upsert,'createMany': createMany,'set': set$,'disconnect': disconnect,'delete': delete,'connect': connect,'update': update,'updateMany': updateMany,'deleteMany': deleteMany,
   };
 
 }
@@ -1412,7 +1399,7 @@ class IntFieldUpdateOperationsInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'set': set$,'increment': increment,'decrement': decrement,'multiply': multiply,'divide': divide
+    'set': set$,'increment': increment,'decrement': decrement,'multiply': multiply,'divide': divide,
   };
 
 }
@@ -1450,7 +1437,7 @@ class TaskUncheckedUpdateManyWithoutUserNestedInput implements runtime.JsonSeria
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'create': create,'connectOrCreate': connectOrCreate,'upsert': upsert,'createMany': createMany,'set': set$,'disconnect': disconnect,'delete': delete,'connect': connect,'update': update,'updateMany': updateMany,'deleteMany': deleteMany
+    'create': create,'connectOrCreate': connectOrCreate,'upsert': upsert,'createMany': createMany,'set': set$,'disconnect': disconnect,'delete': delete,'connect': connect,'update': update,'updateMany': updateMany,'deleteMany': deleteMany,
   };
 
 }
@@ -1472,7 +1459,7 @@ class UserCreateNestedOneWithoutTasksInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'create': create,'connectOrCreate': connectOrCreate,'connect': connect
+    'create': create,'connectOrCreate': connectOrCreate,'connect': connect,
   };
 
 }
@@ -1490,7 +1477,7 @@ class BoolFieldUpdateOperationsInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'set': set$
+    'set': set$,
   };
 
 }
@@ -1508,7 +1495,7 @@ class DateTimeFieldUpdateOperationsInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'set': set$
+    'set': set$,
   };
 
 }
@@ -1534,7 +1521,7 @@ class UserUpdateOneRequiredWithoutTasksNestedInput implements runtime.JsonSerial
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'create': create,'connectOrCreate': connectOrCreate,'upsert': upsert,'connect': connect,'update': update
+    'create': create,'connectOrCreate': connectOrCreate,'upsert': upsert,'connect': connect,'update': update,
   };
 
 }
@@ -1566,7 +1553,7 @@ class NestedIntFilter implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'equals': equals,'in': in$,'notIn': notIn,'lt': lt,'lte': lte,'gt': gt,'gte': gte,'not': not
+    'equals': equals,'in': in$,'notIn': notIn,'lt': lt,'lte': lte,'gt': gt,'gte': gte,'not': not,
   };
 
 }
@@ -1604,7 +1591,7 @@ class NestedStringFilter implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'equals': equals,'in': in$,'notIn': notIn,'lt': lt,'lte': lte,'gt': gt,'gte': gte,'contains': contains,'startsWith': startsWith,'endsWith': endsWith,'not': not
+    'equals': equals,'in': in$,'notIn': notIn,'lt': lt,'lte': lte,'gt': gt,'gte': gte,'contains': contains,'startsWith': startsWith,'endsWith': endsWith,'not': not,
   };
 
 }
@@ -1646,7 +1633,7 @@ class NestedIntWithAggregatesFilter implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'equals': equals,'in': in$,'notIn': notIn,'lt': lt,'lte': lte,'gt': gt,'gte': gte,'not': not,'_count': $count,'_avg': $avg,'_sum': $sum,'_min': $min,'_max': $max
+    'equals': equals,'in': in$,'notIn': notIn,'lt': lt,'lte': lte,'gt': gt,'gte': gte,'not': not,'_count': $count,'_avg': $avg,'_sum': $sum,'_min': $min,'_max': $max,
   };
 
 }
@@ -1678,7 +1665,7 @@ class NestedFloatFilter implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'equals': equals,'in': in$,'notIn': notIn,'lt': lt,'lte': lte,'gt': gt,'gte': gte,'not': not
+    'equals': equals,'in': in$,'notIn': notIn,'lt': lt,'lte': lte,'gt': gt,'gte': gte,'not': not,
   };
 
 }
@@ -1722,7 +1709,7 @@ class NestedStringWithAggregatesFilter implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'equals': equals,'in': in$,'notIn': notIn,'lt': lt,'lte': lte,'gt': gt,'gte': gte,'contains': contains,'startsWith': startsWith,'endsWith': endsWith,'not': not,'_count': $count,'_min': $min,'_max': $max
+    'equals': equals,'in': in$,'notIn': notIn,'lt': lt,'lte': lte,'gt': gt,'gte': gte,'contains': contains,'startsWith': startsWith,'endsWith': endsWith,'not': not,'_count': $count,'_min': $min,'_max': $max,
   };
 
 }
@@ -1742,7 +1729,7 @@ class NestedBoolFilter implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'equals': equals,'not': not
+    'equals': equals,'not': not,
   };
 
 }
@@ -1774,7 +1761,7 @@ class NestedDateTimeFilter implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'equals': equals,'in': in$,'notIn': notIn,'lt': lt,'lte': lte,'gt': gt,'gte': gte,'not': not
+    'equals': equals,'in': in$,'notIn': notIn,'lt': lt,'lte': lte,'gt': gt,'gte': gte,'not': not,
   };
 
 }
@@ -1800,7 +1787,7 @@ class NestedBoolWithAggregatesFilter implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'equals': equals,'not': not,'_count': $count,'_min': $min,'_max': $max
+    'equals': equals,'not': not,'_count': $count,'_min': $min,'_max': $max,
   };
 
 }
@@ -1838,7 +1825,7 @@ class NestedDateTimeWithAggregatesFilter implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'equals': equals,'in': in$,'notIn': notIn,'lt': lt,'lte': lte,'gt': gt,'gte': gte,'not': not,'_count': $count,'_min': $min,'_max': $max
+    'equals': equals,'in': in$,'notIn': notIn,'lt': lt,'lte': lte,'gt': gt,'gte': gte,'not': not,'_count': $count,'_min': $min,'_max': $max,
   };
 
 }
@@ -1864,7 +1851,7 @@ class TaskCreateWithoutUserInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'title': title,'description': description,'completed': completed,'createdAt': createdAt,'updatedAt': updatedAt
+    'title': title,'description': description,'completed': completed,'createdAt': createdAt,'updatedAt': updatedAt,
   };
 
 }
@@ -1872,9 +1859,7 @@ class TaskCreateWithoutUserInput implements runtime.JsonSerializable {
 class TaskUncheckedCreateWithoutUserInput implements runtime.JsonSerializable {
     const TaskUncheckedCreateWithoutUserInput(
 {
-    this.id,
-    required this.title,
-    required this.description,
+    required this.title, required this.description, this.id,
     this.completed,
     this.createdAt,
     this.updatedAt,
@@ -1892,7 +1877,7 @@ class TaskUncheckedCreateWithoutUserInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'id': id,'title': title,'description': description,'completed': completed,'createdAt': createdAt,'updatedAt': updatedAt
+    'id': id,'title': title,'description': description,'completed': completed,'createdAt': createdAt,'updatedAt': updatedAt,
   };
 
 }
@@ -1912,7 +1897,7 @@ class TaskCreateOrConnectWithoutUserInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'where': where,'create': create
+    'where': where,'create': create,
   };
 
 }
@@ -1932,7 +1917,7 @@ class TaskCreateManyUserInputEnvelope implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'data': data,'skipDuplicates': skipDuplicates
+    'data': data,'skipDuplicates': skipDuplicates,
   };
 
 }
@@ -1954,7 +1939,7 @@ class TaskUpsertWithWhereUniqueWithoutUserInput implements runtime.JsonSerializa
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'where': where,'update': update,'create': create
+    'where': where,'update': update,'create': create,
   };
 
 }
@@ -1974,7 +1959,7 @@ class TaskUpdateWithWhereUniqueWithoutUserInput implements runtime.JsonSerializa
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'where': where,'data': data
+    'where': where,'data': data,
   };
 
 }
@@ -1994,7 +1979,7 @@ class TaskUpdateManyWithWhereWithoutUserInput implements runtime.JsonSerializabl
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'where': where,'data': data
+    'where': where,'data': data,
   };
 
 }
@@ -2030,7 +2015,7 @@ class TaskScalarWhereInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'AND': AND,'OR': OR,'NOT': NOT,'id': id,'title': title,'description': description,'completed': completed,'createdAt': createdAt,'updatedAt': updatedAt,'userId': userId
+    'AND': AND,'OR': OR,'NOT': NOT,'id': id,'title': title,'description': description,'completed': completed,'createdAt': createdAt,'updatedAt': updatedAt,'userId': userId,
   };
 
 }
@@ -2052,7 +2037,7 @@ class UserCreateWithoutTasksInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'username': username,'email': email,'password': password
+    'username': username,'email': email,'password': password,
   };
 
 }
@@ -2060,10 +2045,7 @@ class UserCreateWithoutTasksInput implements runtime.JsonSerializable {
 class UserUncheckedCreateWithoutTasksInput implements runtime.JsonSerializable {
     const UserUncheckedCreateWithoutTasksInput(
 {
-    this.id,
-    required this.username,
-    required this.email,
-    required this.password,
+    required this.username, required this.email, required this.password, this.id,
 }
  );
 
@@ -2076,7 +2058,7 @@ class UserUncheckedCreateWithoutTasksInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'id': id,'username': username,'email': email,'password': password
+    'id': id,'username': username,'email': email,'password': password,
   };
 
 }
@@ -2096,7 +2078,7 @@ class UserCreateOrConnectWithoutTasksInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'where': where,'create': create
+    'where': where,'create': create,
   };
 
 }
@@ -2116,7 +2098,7 @@ class UserUpsertWithoutTasksInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'update': update,'create': create
+    'update': update,'create': create,
   };
 
 }
@@ -2138,7 +2120,7 @@ class UserUpdateWithoutTasksInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'username': username,'email': email,'password': password
+    'username': username,'email': email,'password': password,
   };
 
 }
@@ -2162,7 +2144,7 @@ class UserUncheckedUpdateWithoutTasksInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'id': id,'username': username,'email': email,'password': password
+    'id': id,'username': username,'email': email,'password': password,
   };
 
 }
@@ -2170,9 +2152,7 @@ class UserUncheckedUpdateWithoutTasksInput implements runtime.JsonSerializable {
 class TaskCreateManyUserInput implements runtime.JsonSerializable {
     const TaskCreateManyUserInput(
 {
-    this.id,
-    required this.title,
-    required this.description,
+    required this.title, required this.description, this.id,
     this.completed,
     this.createdAt,
     this.updatedAt,
@@ -2190,7 +2170,7 @@ class TaskCreateManyUserInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'id': id,'title': title,'description': description,'completed': completed,'createdAt': createdAt,'updatedAt': updatedAt
+    'id': id,'title': title,'description': description,'completed': completed,'createdAt': createdAt,'updatedAt': updatedAt,
   };
 
 }
@@ -2216,7 +2196,7 @@ class TaskUpdateWithoutUserInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'title': title,'description': description,'completed': completed,'createdAt': createdAt,'updatedAt': updatedAt
+    'title': title,'description': description,'completed': completed,'createdAt': createdAt,'updatedAt': updatedAt,
   };
 
 }
@@ -2244,7 +2224,7 @@ class TaskUncheckedUpdateWithoutUserInput implements runtime.JsonSerializable {
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'id': id,'title': title,'description': description,'completed': completed,'createdAt': createdAt,'updatedAt': updatedAt
+    'id': id,'title': title,'description': description,'completed': completed,'createdAt': createdAt,'updatedAt': updatedAt,
   };
 
 }
@@ -2272,7 +2252,7 @@ class TaskUncheckedUpdateManyWithoutTasksInput implements runtime.JsonSerializab
 
     @override
   Map<String, dynamic> toJson() => <String, dynamic> {
-    'id': id,'title': title,'description': description,'completed': completed,'createdAt': createdAt,'updatedAt': updatedAt
+    'id': id,'title': title,'description': description,'completed': completed,'createdAt': createdAt,'updatedAt': updatedAt,
   };
 
 }
@@ -2282,7 +2262,7 @@ class TaskUncheckedUpdateManyWithoutTasksInput implements runtime.JsonSerializab
 @JsonSerializable(
   createFactory: true,
   createToJson: true,
-  explicitToJson: true
+  explicitToJson: true,
 )
 class AggregateUser {
   const AggregateUser({
@@ -2319,7 +2299,7 @@ final UserMaxAggregateOutputType?
 @JsonSerializable(
   createFactory: true,
   createToJson: true,
-  explicitToJson: true
+  explicitToJson: true,
 )
 class UserGroupByOutputType {
   const UserGroupByOutputType({
@@ -2376,7 +2356,7 @@ final UserMaxAggregateOutputType?
 @JsonSerializable(
   createFactory: true,
   createToJson: true,
-  explicitToJson: true
+  explicitToJson: true,
 )
 class AggregateTask {
   const AggregateTask({
@@ -2413,7 +2393,7 @@ final TaskMaxAggregateOutputType?
 @JsonSerializable(
   createFactory: true,
   createToJson: true,
-  explicitToJson: true
+  explicitToJson: true,
 )
 class TaskGroupByOutputType {
   const TaskGroupByOutputType({
@@ -2485,7 +2465,7 @@ final TaskMaxAggregateOutputType?
 @JsonSerializable(
   createFactory: true,
   createToJson: true,
-  explicitToJson: true
+  explicitToJson: true,
 )
 class AffectedRowsOutput {
   const AffectedRowsOutput({
@@ -2507,7 +2487,7 @@ final int
 @JsonSerializable(
   createFactory: true,
   createToJson: true,
-  explicitToJson: true
+  explicitToJson: true,
 )
 class UserCountOutputType {
   const UserCountOutputType({
@@ -2529,7 +2509,7 @@ final int
 @JsonSerializable(
   createFactory: true,
   createToJson: true,
-  explicitToJson: true
+  explicitToJson: true,
 )
 class UserCountAggregateOutputType {
   const UserCountAggregateOutputType({
@@ -2571,7 +2551,7 @@ final int
 @JsonSerializable(
   createFactory: true,
   createToJson: true,
-  explicitToJson: true
+  explicitToJson: true,
 )
 class UserAvgAggregateOutputType {
   const UserAvgAggregateOutputType({
@@ -2593,7 +2573,7 @@ final double?
 @JsonSerializable(
   createFactory: true,
   createToJson: true,
-  explicitToJson: true
+  explicitToJson: true,
 )
 class UserSumAggregateOutputType {
   const UserSumAggregateOutputType({
@@ -2615,7 +2595,7 @@ final int?
 @JsonSerializable(
   createFactory: true,
   createToJson: true,
-  explicitToJson: true
+  explicitToJson: true,
 )
 class UserMinAggregateOutputType {
   const UserMinAggregateOutputType({
@@ -2652,7 +2632,7 @@ final String?
 @JsonSerializable(
   createFactory: true,
   createToJson: true,
-  explicitToJson: true
+  explicitToJson: true,
 )
 class UserMaxAggregateOutputType {
   const UserMaxAggregateOutputType({
@@ -2689,7 +2669,7 @@ final String?
 @JsonSerializable(
   createFactory: true,
   createToJson: true,
-  explicitToJson: true
+  explicitToJson: true,
 )
 class TaskCountAggregateOutputType {
   const TaskCountAggregateOutputType({
@@ -2746,7 +2726,7 @@ final int
 @JsonSerializable(
   createFactory: true,
   createToJson: true,
-  explicitToJson: true
+  explicitToJson: true,
 )
 class TaskAvgAggregateOutputType {
   const TaskAvgAggregateOutputType({
@@ -2773,7 +2753,7 @@ final double?
 @JsonSerializable(
   createFactory: true,
   createToJson: true,
-  explicitToJson: true
+  explicitToJson: true,
 )
 class TaskSumAggregateOutputType {
   const TaskSumAggregateOutputType({
@@ -2800,7 +2780,7 @@ final int?
 @JsonSerializable(
   createFactory: true,
   createToJson: true,
-  explicitToJson: true
+  explicitToJson: true,
 )
 class TaskMinAggregateOutputType {
   const TaskMinAggregateOutputType({
@@ -2852,7 +2832,7 @@ final int?
 @JsonSerializable(
   createFactory: true,
   createToJson: true,
-  explicitToJson: true
+  explicitToJson: true,
 )
 class TaskMaxAggregateOutputType {
   const TaskMaxAggregateOutputType({
@@ -2905,7 +2885,7 @@ final int?
 @JsonSerializable(
   createFactory: true,
   createToJson: true,
-  explicitToJson: true
+  explicitToJson: true,
 )
 class User {
   const User({
@@ -2947,7 +2927,7 @@ final List<Task>?
 @JsonSerializable(
   createFactory: true,
   createToJson: true,
-  explicitToJson: true
+  explicitToJson: true,
 )
 class Task {
   const Task({
@@ -3016,7 +2996,7 @@ final runtime.Engine _engine;
 final runtime.QueryEngineRequestHeaders? _headers;
 
 Future<User?> findUnique({required UserWhereUniqueInput where,}) async {
-  final String sdl = runtime.GraphQLField(
+  final sdl = runtime.GraphQLField(
     'query',
     fields: runtime.GraphQLFields([
       runtime.GraphQLField(
@@ -3025,24 +3005,24 @@ Future<User?> findUnique({required UserWhereUniqueInput where,}) async {
   runtime.GraphQLArg(
   'where',
   where,
-  isRequired: true
-)
+  isRequired: true,
+),
 
 ])
 ,
         fields: runtime.GraphQLFields(
   UserScalarFieldEnum.values.map(
-    (UserScalarFieldEnum element) => runtime.GraphQLField(element.name)
-  ).toList()
+    (UserScalarFieldEnum element) => runtime.GraphQLField(element.name),
+  ).toList(),
 )
 ,
       ),
     ]),
   ).toSdl();
 
-  final runtime.QueryEngineResult result = await _engine.request(
+  final result = await _engine.request(
     query: sdl,
-    headers: _headers
+    headers: _headers,
   );
 
   if (result.data['findUniqueUser'] == null) {
@@ -3055,7 +3035,7 @@ Future<User?> findUnique({required UserWhereUniqueInput where,}) async {
 }
 
 Future<User?> findFirst({UserWhereInput? where,List<UserOrderByWithRelationInput>? orderBy,UserWhereUniqueInput? cursor,int? take,int? skip,List<UserScalarFieldEnum>? distinct,}) async {
-  final String sdl = runtime.GraphQLField(
+  final sdl = runtime.GraphQLField(
     'query',
     fields: runtime.GraphQLFields([
       runtime.GraphQLField(
@@ -3064,49 +3044,43 @@ Future<User?> findFirst({UserWhereInput? where,List<UserOrderByWithRelationInput
   runtime.GraphQLArg(
   'where',
   where,
-  isRequired: false
 )
 ,runtime.GraphQLArg(
   'orderBy',
   orderBy,
-  isRequired: false
 )
 ,runtime.GraphQLArg(
   'cursor',
   cursor,
-  isRequired: false
 )
 ,runtime.GraphQLArg(
   'take',
   take,
-  isRequired: false
 )
 ,runtime.GraphQLArg(
   'skip',
   skip,
-  isRequired: false
 )
 ,runtime.GraphQLArg(
   'distinct',
   distinct,
-  isRequired: false
-)
+),
 
 ])
 ,
         fields: runtime.GraphQLFields(
   UserScalarFieldEnum.values.map(
-    (UserScalarFieldEnum element) => runtime.GraphQLField(element.name)
-  ).toList()
+    (UserScalarFieldEnum element) => runtime.GraphQLField(element.name),
+  ).toList(),
 )
 ,
       ),
     ]),
   ).toSdl();
 
-  final runtime.QueryEngineResult result = await _engine.request(
+  final result = await _engine.request(
     query: sdl,
-    headers: _headers
+    headers: _headers,
   );
 
   if (result.data['findFirstUser'] == null) {
@@ -3119,7 +3093,7 @@ Future<User?> findFirst({UserWhereInput? where,List<UserOrderByWithRelationInput
 }
 
 Future<List<User>> findMany({UserWhereInput? where,List<UserOrderByWithRelationInput>? orderBy,UserWhereUniqueInput? cursor,int? take,int? skip,List<UserScalarFieldEnum>? distinct,}) async {
-  final String sdl = runtime.GraphQLField(
+  final sdl = runtime.GraphQLField(
     'query',
     fields: runtime.GraphQLFields([
       runtime.GraphQLField(
@@ -3128,49 +3102,43 @@ Future<List<User>> findMany({UserWhereInput? where,List<UserOrderByWithRelationI
   runtime.GraphQLArg(
   'where',
   where,
-  isRequired: false
 )
 ,runtime.GraphQLArg(
   'orderBy',
   orderBy,
-  isRequired: false
 )
 ,runtime.GraphQLArg(
   'cursor',
   cursor,
-  isRequired: false
 )
 ,runtime.GraphQLArg(
   'take',
   take,
-  isRequired: false
 )
 ,runtime.GraphQLArg(
   'skip',
   skip,
-  isRequired: false
 )
 ,runtime.GraphQLArg(
   'distinct',
   distinct,
-  isRequired: false
-)
+),
 
 ])
 ,
         fields: runtime.GraphQLFields(
   UserScalarFieldEnum.values.map(
-    (UserScalarFieldEnum element) => runtime.GraphQLField(element.name)
-  ).toList()
+    (UserScalarFieldEnum element) => runtime.GraphQLField(element.name),
+  ).toList(),
 )
 ,
       ),
     ]),
   ).toSdl();
 
-  final runtime.QueryEngineResult result = await _engine.request(
+  final result = await _engine.request(
     query: sdl,
-    headers: _headers
+    headers: _headers,
   );
 
   return (result.data['findManyUser'] as List<dynamic>)
@@ -3182,7 +3150,7 @@ Future<List<User>> findMany({UserWhereInput? where,List<UserOrderByWithRelationI
 }
 
 Future<User> create({required runtime.PrismaUnion<UserCreateInput, UserUncheckedCreateInput> data,}) async {
-  final String sdl = runtime.GraphQLField(
+  final sdl = runtime.GraphQLField(
     'mutation',
     fields: runtime.GraphQLFields([
       runtime.GraphQLField(
@@ -3191,24 +3159,24 @@ Future<User> create({required runtime.PrismaUnion<UserCreateInput, UserUnchecked
   runtime.GraphQLArg(
   'data',
   data,
-  isRequired: true
-)
+  isRequired: true,
+),
 
 ])
 ,
         fields: runtime.GraphQLFields(
   UserScalarFieldEnum.values.map(
-    (UserScalarFieldEnum element) => runtime.GraphQLField(element.name)
-  ).toList()
+    (UserScalarFieldEnum element) => runtime.GraphQLField(element.name),
+  ).toList(),
 )
 ,
       ),
     ]),
   ).toSdl();
 
-  final runtime.QueryEngineResult result = await _engine.request(
+  final result = await _engine.request(
     query: sdl,
-    headers: _headers
+    headers: _headers,
   );
 
   return User.fromJson(result.data['createOneUser'] as Map<String, dynamic>);
@@ -3217,7 +3185,7 @@ Future<User> create({required runtime.PrismaUnion<UserCreateInput, UserUnchecked
 }
 
 Future<AffectedRowsOutput> createMany({required List<UserCreateManyInput> data,bool? skipDuplicates,}) async {
-  final String sdl = runtime.GraphQLField(
+  final sdl = runtime.GraphQLField(
     'mutation',
     fields: runtime.GraphQLFields([
       runtime.GraphQLField(
@@ -3226,29 +3194,28 @@ Future<AffectedRowsOutput> createMany({required List<UserCreateManyInput> data,b
   runtime.GraphQLArg(
   'data',
   data,
-  isRequired: true
+  isRequired: true,
 )
 ,runtime.GraphQLArg(
   'skipDuplicates',
   skipDuplicates,
-  isRequired: false
-)
+),
 
 ])
 ,
         fields: runtime.GraphQLFields(
   UserScalarFieldEnum.values.map(
-    (UserScalarFieldEnum element) => runtime.GraphQLField(element.name)
-  ).toList()
+    (UserScalarFieldEnum element) => runtime.GraphQLField(element.name),
+  ).toList(),
 )
 ,
       ),
     ]),
   ).toSdl();
 
-  final runtime.QueryEngineResult result = await _engine.request(
+  final result = await _engine.request(
     query: sdl,
-    headers: _headers
+    headers: _headers,
   );
 
   return AffectedRowsOutput.fromJson(result.data['createManyUser'] as Map<String, dynamic>);
@@ -3257,7 +3224,7 @@ Future<AffectedRowsOutput> createMany({required List<UserCreateManyInput> data,b
 }
 
 Future<User?> update({required runtime.PrismaUnion<UserUpdateInput, UserUncheckedUpdateInput> data,required UserWhereUniqueInput where,}) async {
-  final String sdl = runtime.GraphQLField(
+  final sdl = runtime.GraphQLField(
     'mutation',
     fields: runtime.GraphQLFields([
       runtime.GraphQLField(
@@ -3266,29 +3233,29 @@ Future<User?> update({required runtime.PrismaUnion<UserUpdateInput, UserUnchecke
   runtime.GraphQLArg(
   'data',
   data,
-  isRequired: true
+  isRequired: true,
 )
 ,runtime.GraphQLArg(
   'where',
   where,
-  isRequired: true
-)
+  isRequired: true,
+),
 
 ])
 ,
         fields: runtime.GraphQLFields(
   UserScalarFieldEnum.values.map(
-    (UserScalarFieldEnum element) => runtime.GraphQLField(element.name)
-  ).toList()
+    (UserScalarFieldEnum element) => runtime.GraphQLField(element.name),
+  ).toList(),
 )
 ,
       ),
     ]),
   ).toSdl();
 
-  final runtime.QueryEngineResult result = await _engine.request(
+  final result = await _engine.request(
     query: sdl,
-    headers: _headers
+    headers: _headers,
   );
 
   if (result.data['updateOneUser'] == null) {
@@ -3301,7 +3268,7 @@ Future<User?> update({required runtime.PrismaUnion<UserUpdateInput, UserUnchecke
 }
 
 Future<AffectedRowsOutput> updateMany({required runtime.PrismaUnion<UserUpdateManyMutationInput, UserUncheckedUpdateManyInput> data,UserWhereInput? where,}) async {
-  final String sdl = runtime.GraphQLField(
+  final sdl = runtime.GraphQLField(
     'mutation',
     fields: runtime.GraphQLFields([
       runtime.GraphQLField(
@@ -3310,29 +3277,28 @@ Future<AffectedRowsOutput> updateMany({required runtime.PrismaUnion<UserUpdateMa
   runtime.GraphQLArg(
   'data',
   data,
-  isRequired: true
+  isRequired: true,
 )
 ,runtime.GraphQLArg(
   'where',
   where,
-  isRequired: false
-)
+),
 
 ])
 ,
         fields: runtime.GraphQLFields(
   UserScalarFieldEnum.values.map(
-    (UserScalarFieldEnum element) => runtime.GraphQLField(element.name)
-  ).toList()
+    (UserScalarFieldEnum element) => runtime.GraphQLField(element.name),
+  ).toList(),
 )
 ,
       ),
     ]),
   ).toSdl();
 
-  final runtime.QueryEngineResult result = await _engine.request(
+  final result = await _engine.request(
     query: sdl,
-    headers: _headers
+    headers: _headers,
   );
 
   return AffectedRowsOutput.fromJson(result.data['updateManyUser'] as Map<String, dynamic>);
@@ -3341,7 +3307,7 @@ Future<AffectedRowsOutput> updateMany({required runtime.PrismaUnion<UserUpdateMa
 }
 
 Future<User> upsert({required UserWhereUniqueInput where,required runtime.PrismaUnion<UserCreateInput, UserUncheckedCreateInput> create,required runtime.PrismaUnion<UserUpdateInput, UserUncheckedUpdateInput> update,}) async {
-  final String sdl = runtime.GraphQLField(
+  final sdl = runtime.GraphQLField(
     'mutation',
     fields: runtime.GraphQLFields([
       runtime.GraphQLField(
@@ -3350,34 +3316,34 @@ Future<User> upsert({required UserWhereUniqueInput where,required runtime.Prisma
   runtime.GraphQLArg(
   'where',
   where,
-  isRequired: true
+  isRequired: true,
 )
 ,runtime.GraphQLArg(
   'create',
   create,
-  isRequired: true
+  isRequired: true,
 )
 ,runtime.GraphQLArg(
   'update',
   update,
-  isRequired: true
-)
+  isRequired: true,
+),
 
 ])
 ,
         fields: runtime.GraphQLFields(
   UserScalarFieldEnum.values.map(
-    (UserScalarFieldEnum element) => runtime.GraphQLField(element.name)
-  ).toList()
+    (UserScalarFieldEnum element) => runtime.GraphQLField(element.name),
+  ).toList(),
 )
 ,
       ),
     ]),
   ).toSdl();
 
-  final runtime.QueryEngineResult result = await _engine.request(
+  final result = await _engine.request(
     query: sdl,
-    headers: _headers
+    headers: _headers,
   );
 
   return User.fromJson(result.data['upsertOneUser'] as Map<String, dynamic>);
@@ -3386,7 +3352,7 @@ Future<User> upsert({required UserWhereUniqueInput where,required runtime.Prisma
 }
 
 Future<User?> delete({required UserWhereUniqueInput where,}) async {
-  final String sdl = runtime.GraphQLField(
+  final sdl = runtime.GraphQLField(
     'mutation',
     fields: runtime.GraphQLFields([
       runtime.GraphQLField(
@@ -3395,24 +3361,24 @@ Future<User?> delete({required UserWhereUniqueInput where,}) async {
   runtime.GraphQLArg(
   'where',
   where,
-  isRequired: true
-)
+  isRequired: true,
+),
 
 ])
 ,
         fields: runtime.GraphQLFields(
   UserScalarFieldEnum.values.map(
-    (UserScalarFieldEnum element) => runtime.GraphQLField(element.name)
-  ).toList()
+    (UserScalarFieldEnum element) => runtime.GraphQLField(element.name),
+  ).toList(),
 )
 ,
       ),
     ]),
   ).toSdl();
 
-  final runtime.QueryEngineResult result = await _engine.request(
+  final result = await _engine.request(
     query: sdl,
-    headers: _headers
+    headers: _headers,
   );
 
   if (result.data['deleteOneUser'] == null) {
@@ -3425,7 +3391,7 @@ Future<User?> delete({required UserWhereUniqueInput where,}) async {
 }
 
 Future<AffectedRowsOutput> deleteMany({UserWhereInput? where,}) async {
-  final String sdl = runtime.GraphQLField(
+  final sdl = runtime.GraphQLField(
     'mutation',
     fields: runtime.GraphQLFields([
       runtime.GraphQLField(
@@ -3434,24 +3400,23 @@ Future<AffectedRowsOutput> deleteMany({UserWhereInput? where,}) async {
   runtime.GraphQLArg(
   'where',
   where,
-  isRequired: false
-)
+),
 
 ])
 ,
         fields: runtime.GraphQLFields(
   UserScalarFieldEnum.values.map(
-    (UserScalarFieldEnum element) => runtime.GraphQLField(element.name)
-  ).toList()
+    (UserScalarFieldEnum element) => runtime.GraphQLField(element.name),
+  ).toList(),
 )
 ,
       ),
     ]),
   ).toSdl();
 
-  final runtime.QueryEngineResult result = await _engine.request(
+  final result = await _engine.request(
     query: sdl,
-    headers: _headers
+    headers: _headers,
   );
 
   return AffectedRowsOutput.fromJson(result.data['deleteManyUser'] as Map<String, dynamic>);
@@ -3460,7 +3425,7 @@ Future<AffectedRowsOutput> deleteMany({UserWhereInput? where,}) async {
 }
 
 Future<AggregateUser> aggregate({UserWhereInput? where,List<UserOrderByWithRelationInput>? orderBy,UserWhereUniqueInput? cursor,int? take,int? skip,}) async {
-  final String sdl = runtime.GraphQLField(
+  final sdl = runtime.GraphQLField(
     'query',
     fields: runtime.GraphQLFields([
       runtime.GraphQLField(
@@ -3469,44 +3434,39 @@ Future<AggregateUser> aggregate({UserWhereInput? where,List<UserOrderByWithRelat
   runtime.GraphQLArg(
   'where',
   where,
-  isRequired: false
 )
 ,runtime.GraphQLArg(
   'orderBy',
   orderBy,
-  isRequired: false
 )
 ,runtime.GraphQLArg(
   'cursor',
   cursor,
-  isRequired: false
 )
 ,runtime.GraphQLArg(
   'take',
   take,
-  isRequired: false
 )
 ,runtime.GraphQLArg(
   'skip',
   skip,
-  isRequired: false
-)
+),
 
 ])
 ,
         fields: runtime.GraphQLFields(
   UserScalarFieldEnum.values.map(
-    (UserScalarFieldEnum element) => runtime.GraphQLField(element.name)
-  ).toList()
+    (UserScalarFieldEnum element) => runtime.GraphQLField(element.name),
+  ).toList(),
 )
 ,
       ),
     ]),
   ).toSdl();
 
-  final runtime.QueryEngineResult result = await _engine.request(
+  final result = await _engine.request(
     query: sdl,
-    headers: _headers
+    headers: _headers,
   );
 
   return AggregateUser.fromJson(result.data['aggregateUser'] as Map<String, dynamic>);
@@ -3514,8 +3474,8 @@ Future<AggregateUser> aggregate({UserWhereInput? where,List<UserOrderByWithRelat
 
 }
 
-Future<List<UserGroupByOutputType>> groupBy({UserWhereInput? where,List<UserOrderByWithAggregationInput>? orderBy,required List<UserScalarFieldEnum> by,UserScalarWhereWithAggregatesInput? having,int? take,int? skip,}) async {
-  final String sdl = runtime.GraphQLField(
+Future<List<UserGroupByOutputType>> groupBy({required List<UserScalarFieldEnum> by, UserWhereInput? where,List<UserOrderByWithAggregationInput>? orderBy,UserScalarWhereWithAggregatesInput? having,int? take,int? skip,}) async {
+  final sdl = runtime.GraphQLField(
     'query',
     fields: runtime.GraphQLFields([
       runtime.GraphQLField(
@@ -3524,49 +3484,44 @@ Future<List<UserGroupByOutputType>> groupBy({UserWhereInput? where,List<UserOrde
   runtime.GraphQLArg(
   'where',
   where,
-  isRequired: false
 )
 ,runtime.GraphQLArg(
   'orderBy',
   orderBy,
-  isRequired: false
 )
 ,runtime.GraphQLArg(
   'by',
   by,
-  isRequired: true
+  isRequired: true,
 )
 ,runtime.GraphQLArg(
   'having',
   having,
-  isRequired: false
 )
 ,runtime.GraphQLArg(
   'take',
   take,
-  isRequired: false
 )
 ,runtime.GraphQLArg(
   'skip',
   skip,
-  isRequired: false
-)
+),
 
 ])
 ,
         fields: runtime.GraphQLFields(
   UserScalarFieldEnum.values.map(
-    (UserScalarFieldEnum element) => runtime.GraphQLField(element.name)
-  ).toList()
+    (UserScalarFieldEnum element) => runtime.GraphQLField(element.name),
+  ).toList(),
 )
 ,
       ),
     ]),
   ).toSdl();
 
-  final runtime.QueryEngineResult result = await _engine.request(
+  final result = await _engine.request(
     query: sdl,
-    headers: _headers
+    headers: _headers,
   );
 
   return (result.data['groupByUser'] as List<dynamic>)
@@ -3590,7 +3545,7 @@ final runtime.Engine _engine;
 final runtime.QueryEngineRequestHeaders? _headers;
 
 Future<Task?> findUnique({required TaskWhereUniqueInput where,}) async {
-  final String sdl = runtime.GraphQLField(
+  final sdl = runtime.GraphQLField(
     'query',
     fields: runtime.GraphQLFields([
       runtime.GraphQLField(
@@ -3599,24 +3554,24 @@ Future<Task?> findUnique({required TaskWhereUniqueInput where,}) async {
   runtime.GraphQLArg(
   'where',
   where,
-  isRequired: true
-)
+  isRequired: true,
+),
 
 ])
 ,
         fields: runtime.GraphQLFields(
   TaskScalarFieldEnum.values.map(
-    (TaskScalarFieldEnum element) => runtime.GraphQLField(element.name)
-  ).toList()
+    (TaskScalarFieldEnum element) => runtime.GraphQLField(element.name),
+  ).toList(),
 )
 ,
       ),
     ]),
   ).toSdl();
 
-  final runtime.QueryEngineResult result = await _engine.request(
+  final result = await _engine.request(
     query: sdl,
-    headers: _headers
+    headers: _headers,
   );
 
   if (result.data['findUniqueTask'] == null) {
@@ -3629,7 +3584,7 @@ Future<Task?> findUnique({required TaskWhereUniqueInput where,}) async {
 }
 
 Future<Task?> findFirst({TaskWhereInput? where,List<TaskOrderByWithRelationInput>? orderBy,TaskWhereUniqueInput? cursor,int? take,int? skip,List<TaskScalarFieldEnum>? distinct,}) async {
-  final String sdl = runtime.GraphQLField(
+  final sdl = runtime.GraphQLField(
     'query',
     fields: runtime.GraphQLFields([
       runtime.GraphQLField(
@@ -3638,49 +3593,43 @@ Future<Task?> findFirst({TaskWhereInput? where,List<TaskOrderByWithRelationInput
   runtime.GraphQLArg(
   'where',
   where,
-  isRequired: false
 )
 ,runtime.GraphQLArg(
   'orderBy',
   orderBy,
-  isRequired: false
 )
 ,runtime.GraphQLArg(
   'cursor',
   cursor,
-  isRequired: false
 )
 ,runtime.GraphQLArg(
   'take',
   take,
-  isRequired: false
 )
 ,runtime.GraphQLArg(
   'skip',
   skip,
-  isRequired: false
 )
 ,runtime.GraphQLArg(
   'distinct',
   distinct,
-  isRequired: false
-)
+),
 
 ])
 ,
         fields: runtime.GraphQLFields(
   TaskScalarFieldEnum.values.map(
-    (TaskScalarFieldEnum element) => runtime.GraphQLField(element.name)
-  ).toList()
+    (TaskScalarFieldEnum element) => runtime.GraphQLField(element.name),
+  ).toList(),
 )
 ,
       ),
     ]),
   ).toSdl();
 
-  final runtime.QueryEngineResult result = await _engine.request(
+  final result = await _engine.request(
     query: sdl,
-    headers: _headers
+    headers: _headers,
   );
 
   if (result.data['findFirstTask'] == null) {
@@ -3693,7 +3642,7 @@ Future<Task?> findFirst({TaskWhereInput? where,List<TaskOrderByWithRelationInput
 }
 
 Future<List<Task>> findMany({TaskWhereInput? where,List<TaskOrderByWithRelationInput>? orderBy,TaskWhereUniqueInput? cursor,int? take,int? skip,List<TaskScalarFieldEnum>? distinct,}) async {
-  final String sdl = runtime.GraphQLField(
+  final sdl = runtime.GraphQLField(
     'query',
     fields: runtime.GraphQLFields([
       runtime.GraphQLField(
@@ -3702,49 +3651,43 @@ Future<List<Task>> findMany({TaskWhereInput? where,List<TaskOrderByWithRelationI
   runtime.GraphQLArg(
   'where',
   where,
-  isRequired: false
 )
 ,runtime.GraphQLArg(
   'orderBy',
   orderBy,
-  isRequired: false
 )
 ,runtime.GraphQLArg(
   'cursor',
   cursor,
-  isRequired: false
 )
 ,runtime.GraphQLArg(
   'take',
   take,
-  isRequired: false
 )
 ,runtime.GraphQLArg(
   'skip',
   skip,
-  isRequired: false
 )
 ,runtime.GraphQLArg(
   'distinct',
   distinct,
-  isRequired: false
-)
+),
 
 ])
 ,
         fields: runtime.GraphQLFields(
   TaskScalarFieldEnum.values.map(
-    (TaskScalarFieldEnum element) => runtime.GraphQLField(element.name)
-  ).toList()
+    (TaskScalarFieldEnum element) => runtime.GraphQLField(element.name),
+  ).toList(),
 )
 ,
       ),
     ]),
   ).toSdl();
 
-  final runtime.QueryEngineResult result = await _engine.request(
+  final result = await _engine.request(
     query: sdl,
-    headers: _headers
+    headers: _headers,
   );
 
   return (result.data['findManyTask'] as List<dynamic>)
@@ -3756,7 +3699,7 @@ Future<List<Task>> findMany({TaskWhereInput? where,List<TaskOrderByWithRelationI
 }
 
 Future<Task> create({required runtime.PrismaUnion<TaskCreateInput, TaskUncheckedCreateInput> data,}) async {
-  final String sdl = runtime.GraphQLField(
+  final sdl = runtime.GraphQLField(
     'mutation',
     fields: runtime.GraphQLFields([
       runtime.GraphQLField(
@@ -3765,24 +3708,24 @@ Future<Task> create({required runtime.PrismaUnion<TaskCreateInput, TaskUnchecked
   runtime.GraphQLArg(
   'data',
   data,
-  isRequired: true
-)
+  isRequired: true,
+),
 
 ])
 ,
         fields: runtime.GraphQLFields(
   TaskScalarFieldEnum.values.map(
-    (TaskScalarFieldEnum element) => runtime.GraphQLField(element.name)
-  ).toList()
+    (TaskScalarFieldEnum element) => runtime.GraphQLField(element.name),
+  ).toList(),
 )
 ,
       ),
     ]),
   ).toSdl();
 
-  final runtime.QueryEngineResult result = await _engine.request(
+  final result = await _engine.request(
     query: sdl,
-    headers: _headers
+    headers: _headers,
   );
 
   return Task.fromJson(result.data['createOneTask'] as Map<String, dynamic>);
@@ -3791,7 +3734,7 @@ Future<Task> create({required runtime.PrismaUnion<TaskCreateInput, TaskUnchecked
 }
 
 Future<AffectedRowsOutput> createMany({required List<TaskCreateManyInput> data,bool? skipDuplicates,}) async {
-  final String sdl = runtime.GraphQLField(
+  final sdl = runtime.GraphQLField(
     'mutation',
     fields: runtime.GraphQLFields([
       runtime.GraphQLField(
@@ -3800,29 +3743,28 @@ Future<AffectedRowsOutput> createMany({required List<TaskCreateManyInput> data,b
   runtime.GraphQLArg(
   'data',
   data,
-  isRequired: true
+  isRequired: true,
 )
 ,runtime.GraphQLArg(
   'skipDuplicates',
   skipDuplicates,
-  isRequired: false
-)
+),
 
 ])
 ,
         fields: runtime.GraphQLFields(
   TaskScalarFieldEnum.values.map(
-    (TaskScalarFieldEnum element) => runtime.GraphQLField(element.name)
-  ).toList()
+    (TaskScalarFieldEnum element) => runtime.GraphQLField(element.name),
+  ).toList(),
 )
 ,
       ),
     ]),
   ).toSdl();
 
-  final runtime.QueryEngineResult result = await _engine.request(
+  final result = await _engine.request(
     query: sdl,
-    headers: _headers
+    headers: _headers,
   );
 
   return AffectedRowsOutput.fromJson(result.data['createManyTask'] as Map<String, dynamic>);
@@ -3831,7 +3773,7 @@ Future<AffectedRowsOutput> createMany({required List<TaskCreateManyInput> data,b
 }
 
 Future<Task?> update({required runtime.PrismaUnion<TaskUpdateInput, TaskUncheckedUpdateInput> data,required TaskWhereUniqueInput where,}) async {
-  final String sdl = runtime.GraphQLField(
+  final sdl = runtime.GraphQLField(
     'mutation',
     fields: runtime.GraphQLFields([
       runtime.GraphQLField(
@@ -3840,29 +3782,29 @@ Future<Task?> update({required runtime.PrismaUnion<TaskUpdateInput, TaskUnchecke
   runtime.GraphQLArg(
   'data',
   data,
-  isRequired: true
+  isRequired: true,
 )
 ,runtime.GraphQLArg(
   'where',
   where,
-  isRequired: true
-)
+  isRequired: true,
+),
 
 ])
 ,
         fields: runtime.GraphQLFields(
   TaskScalarFieldEnum.values.map(
-    (TaskScalarFieldEnum element) => runtime.GraphQLField(element.name)
-  ).toList()
+    (TaskScalarFieldEnum element) => runtime.GraphQLField(element.name),
+  ).toList(),
 )
 ,
       ),
     ]),
   ).toSdl();
 
-  final runtime.QueryEngineResult result = await _engine.request(
+  final result = await _engine.request(
     query: sdl,
-    headers: _headers
+    headers: _headers,
   );
 
   if (result.data['updateOneTask'] == null) {
@@ -3875,7 +3817,7 @@ Future<Task?> update({required runtime.PrismaUnion<TaskUpdateInput, TaskUnchecke
 }
 
 Future<AffectedRowsOutput> updateMany({required runtime.PrismaUnion<TaskUpdateManyMutationInput, TaskUncheckedUpdateManyInput> data,TaskWhereInput? where,}) async {
-  final String sdl = runtime.GraphQLField(
+  final sdl = runtime.GraphQLField(
     'mutation',
     fields: runtime.GraphQLFields([
       runtime.GraphQLField(
@@ -3884,29 +3826,28 @@ Future<AffectedRowsOutput> updateMany({required runtime.PrismaUnion<TaskUpdateMa
   runtime.GraphQLArg(
   'data',
   data,
-  isRequired: true
+  isRequired: true,
 )
 ,runtime.GraphQLArg(
   'where',
   where,
-  isRequired: false
-)
+),
 
 ])
 ,
         fields: runtime.GraphQLFields(
   TaskScalarFieldEnum.values.map(
-    (TaskScalarFieldEnum element) => runtime.GraphQLField(element.name)
-  ).toList()
+    (TaskScalarFieldEnum element) => runtime.GraphQLField(element.name),
+  ).toList(),
 )
 ,
       ),
     ]),
   ).toSdl();
 
-  final runtime.QueryEngineResult result = await _engine.request(
+  final result = await _engine.request(
     query: sdl,
-    headers: _headers
+    headers: _headers,
   );
 
   return AffectedRowsOutput.fromJson(result.data['updateManyTask'] as Map<String, dynamic>);
@@ -3915,7 +3856,7 @@ Future<AffectedRowsOutput> updateMany({required runtime.PrismaUnion<TaskUpdateMa
 }
 
 Future<Task> upsert({required TaskWhereUniqueInput where,required runtime.PrismaUnion<TaskCreateInput, TaskUncheckedCreateInput> create,required runtime.PrismaUnion<TaskUpdateInput, TaskUncheckedUpdateInput> update,}) async {
-  final String sdl = runtime.GraphQLField(
+  final sdl = runtime.GraphQLField(
     'mutation',
     fields: runtime.GraphQLFields([
       runtime.GraphQLField(
@@ -3924,34 +3865,34 @@ Future<Task> upsert({required TaskWhereUniqueInput where,required runtime.Prisma
   runtime.GraphQLArg(
   'where',
   where,
-  isRequired: true
+  isRequired: true,
 )
 ,runtime.GraphQLArg(
   'create',
   create,
-  isRequired: true
+  isRequired: true,
 )
 ,runtime.GraphQLArg(
   'update',
   update,
-  isRequired: true
-)
+  isRequired: true,
+),
 
 ])
 ,
         fields: runtime.GraphQLFields(
   TaskScalarFieldEnum.values.map(
-    (TaskScalarFieldEnum element) => runtime.GraphQLField(element.name)
-  ).toList()
+    (TaskScalarFieldEnum element) => runtime.GraphQLField(element.name),
+  ).toList(),
 )
 ,
       ),
     ]),
   ).toSdl();
 
-  final runtime.QueryEngineResult result = await _engine.request(
+  final result = await _engine.request(
     query: sdl,
-    headers: _headers
+    headers: _headers,
   );
 
   return Task.fromJson(result.data['upsertOneTask'] as Map<String, dynamic>);
@@ -3960,7 +3901,7 @@ Future<Task> upsert({required TaskWhereUniqueInput where,required runtime.Prisma
 }
 
 Future<Task?> delete({required TaskWhereUniqueInput where,}) async {
-  final String sdl = runtime.GraphQLField(
+  final sdl = runtime.GraphQLField(
     'mutation',
     fields: runtime.GraphQLFields([
       runtime.GraphQLField(
@@ -3969,24 +3910,24 @@ Future<Task?> delete({required TaskWhereUniqueInput where,}) async {
   runtime.GraphQLArg(
   'where',
   where,
-  isRequired: true
-)
+  isRequired: true,
+),
 
 ])
 ,
         fields: runtime.GraphQLFields(
   TaskScalarFieldEnum.values.map(
-    (TaskScalarFieldEnum element) => runtime.GraphQLField(element.name)
-  ).toList()
+    (TaskScalarFieldEnum element) => runtime.GraphQLField(element.name),
+  ).toList(),
 )
 ,
       ),
     ]),
   ).toSdl();
 
-  final runtime.QueryEngineResult result = await _engine.request(
+  final result = await _engine.request(
     query: sdl,
-    headers: _headers
+    headers: _headers,
   );
 
   if (result.data['deleteOneTask'] == null) {
@@ -3999,7 +3940,7 @@ Future<Task?> delete({required TaskWhereUniqueInput where,}) async {
 }
 
 Future<AffectedRowsOutput> deleteMany({TaskWhereInput? where,}) async {
-  final String sdl = runtime.GraphQLField(
+  final sdl = runtime.GraphQLField(
     'mutation',
     fields: runtime.GraphQLFields([
       runtime.GraphQLField(
@@ -4008,24 +3949,23 @@ Future<AffectedRowsOutput> deleteMany({TaskWhereInput? where,}) async {
   runtime.GraphQLArg(
   'where',
   where,
-  isRequired: false
-)
+),
 
 ])
 ,
         fields: runtime.GraphQLFields(
   TaskScalarFieldEnum.values.map(
-    (TaskScalarFieldEnum element) => runtime.GraphQLField(element.name)
-  ).toList()
+    (TaskScalarFieldEnum element) => runtime.GraphQLField(element.name),
+  ).toList(),
 )
 ,
       ),
     ]),
   ).toSdl();
 
-  final runtime.QueryEngineResult result = await _engine.request(
+  final result = await _engine.request(
     query: sdl,
-    headers: _headers
+    headers: _headers,
   );
 
   return AffectedRowsOutput.fromJson(result.data['deleteManyTask'] as Map<String, dynamic>);
@@ -4034,7 +3974,7 @@ Future<AffectedRowsOutput> deleteMany({TaskWhereInput? where,}) async {
 }
 
 Future<AggregateTask> aggregate({TaskWhereInput? where,List<TaskOrderByWithRelationInput>? orderBy,TaskWhereUniqueInput? cursor,int? take,int? skip,}) async {
-  final String sdl = runtime.GraphQLField(
+  final sdl = runtime.GraphQLField(
     'query',
     fields: runtime.GraphQLFields([
       runtime.GraphQLField(
@@ -4043,44 +3983,39 @@ Future<AggregateTask> aggregate({TaskWhereInput? where,List<TaskOrderByWithRelat
   runtime.GraphQLArg(
   'where',
   where,
-  isRequired: false
 )
 ,runtime.GraphQLArg(
   'orderBy',
   orderBy,
-  isRequired: false
 )
 ,runtime.GraphQLArg(
   'cursor',
   cursor,
-  isRequired: false
 )
 ,runtime.GraphQLArg(
   'take',
   take,
-  isRequired: false
 )
 ,runtime.GraphQLArg(
   'skip',
   skip,
-  isRequired: false
-)
+),
 
 ])
 ,
         fields: runtime.GraphQLFields(
   TaskScalarFieldEnum.values.map(
-    (TaskScalarFieldEnum element) => runtime.GraphQLField(element.name)
-  ).toList()
+    (TaskScalarFieldEnum element) => runtime.GraphQLField(element.name),
+  ).toList(),
 )
 ,
       ),
     ]),
   ).toSdl();
 
-  final runtime.QueryEngineResult result = await _engine.request(
+  final result = await _engine.request(
     query: sdl,
-    headers: _headers
+    headers: _headers,
   );
 
   return AggregateTask.fromJson(result.data['aggregateTask'] as Map<String, dynamic>);
@@ -4088,8 +4023,8 @@ Future<AggregateTask> aggregate({TaskWhereInput? where,List<TaskOrderByWithRelat
 
 }
 
-Future<List<TaskGroupByOutputType>> groupBy({TaskWhereInput? where,List<TaskOrderByWithAggregationInput>? orderBy,required List<TaskScalarFieldEnum> by,TaskScalarWhereWithAggregatesInput? having,int? take,int? skip,}) async {
-  final String sdl = runtime.GraphQLField(
+Future<List<TaskGroupByOutputType>> groupBy({required List<TaskScalarFieldEnum> by, TaskWhereInput? where,List<TaskOrderByWithAggregationInput>? orderBy,TaskScalarWhereWithAggregatesInput? having,int? take,int? skip,}) async {
+  final sdl = runtime.GraphQLField(
     'query',
     fields: runtime.GraphQLFields([
       runtime.GraphQLField(
@@ -4098,49 +4033,44 @@ Future<List<TaskGroupByOutputType>> groupBy({TaskWhereInput? where,List<TaskOrde
   runtime.GraphQLArg(
   'where',
   where,
-  isRequired: false
 )
 ,runtime.GraphQLArg(
   'orderBy',
   orderBy,
-  isRequired: false
 )
 ,runtime.GraphQLArg(
   'by',
   by,
-  isRequired: true
+  isRequired: true,
 )
 ,runtime.GraphQLArg(
   'having',
   having,
-  isRequired: false
 )
 ,runtime.GraphQLArg(
   'take',
   take,
-  isRequired: false
 )
 ,runtime.GraphQLArg(
   'skip',
   skip,
-  isRequired: false
-)
+),
 
 ])
 ,
         fields: runtime.GraphQLFields(
   TaskScalarFieldEnum.values.map(
-    (TaskScalarFieldEnum element) => runtime.GraphQLField(element.name)
-  ).toList()
+    (TaskScalarFieldEnum element) => runtime.GraphQLField(element.name),
+  ).toList(),
 )
 ,
       ),
     ]),
   ).toSdl();
 
-  final runtime.QueryEngineResult result = await _engine.request(
+  final result = await _engine.request(
     query: sdl,
-    headers: _headers
+    headers: _headers,
   );
 
   return (result.data['groupByTask'] as List<dynamic>)
@@ -4154,30 +4084,30 @@ Future<List<TaskGroupByOutputType>> groupBy({TaskWhereInput? where,List<TaskOrde
 }
 
 /// Prisma schema DMMF json string.
-const String _dmmfStr = r'{"datamodel":{"models":[{"name":"User","dbName":null,"fields":[{"name":"id","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":true,"isReadOnly":false,"hasDefaultValue":true,"type":"Int","default":{"name":"autoincrement","args":[]},"isGenerated":false,"isUpdatedAt":false,"dbNames":null,"relationFromFields":null,"relationToFields":null,"relationOnDelete":null,"relationName":null,"documentation":null,"additionalProperties":{"name":"id","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":true,"isReadOnly":false,"hasDefaultValue":true,"type":"Int","default":{"name":"autoincrement","args":[]},"isGenerated":false,"isUpdatedAt":false}},{"name":"username","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"String","isGenerated":false,"isUpdatedAt":false,"dbNames":null,"default":null,"relationFromFields":null,"relationToFields":null,"relationOnDelete":null,"relationName":null,"documentation":null,"additionalProperties":{"name":"username","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"String","isGenerated":false,"isUpdatedAt":false}},{"name":"email","kind":"scalar","isList":false,"isRequired":true,"isUnique":true,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"String","isGenerated":false,"isUpdatedAt":false,"dbNames":null,"default":null,"relationFromFields":null,"relationToFields":null,"relationOnDelete":null,"relationName":null,"documentation":null,"additionalProperties":{"name":"email","kind":"scalar","isList":false,"isRequired":true,"isUnique":true,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"String","isGenerated":false,"isUpdatedAt":false}},{"name":"password","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"String","isGenerated":false,"isUpdatedAt":false,"dbNames":null,"default":null,"relationFromFields":null,"relationToFields":null,"relationOnDelete":null,"relationName":null,"documentation":null,"additionalProperties":{"name":"password","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"String","isGenerated":false,"isUpdatedAt":false}},{"name":"tasks","kind":"object","isList":true,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"Task","relationName":"UserTasks","relationFromFields":[],"relationToFields":[],"isGenerated":false,"isUpdatedAt":false,"dbNames":null,"default":null,"relationOnDelete":null,"documentation":null,"additionalProperties":{"name":"tasks","kind":"object","isList":true,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"Task","relationName":"UserTasks","relationFromFields":[],"relationToFields":[],"isGenerated":false,"isUpdatedAt":false}}],"primaryKey":null,"uniqueFields":[],"uniqueIndexes":[],"isGenerated":false,"fieldsMap":null,"documentation":null,"extra":{"name":"User","dbName":null,"fields":[{"name":"id","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":true,"isReadOnly":false,"hasDefaultValue":true,"type":"Int","default":{"name":"autoincrement","args":[]},"isGenerated":false,"isUpdatedAt":false},{"name":"username","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"String","isGenerated":false,"isUpdatedAt":false},{"name":"email","kind":"scalar","isList":false,"isRequired":true,"isUnique":true,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"String","isGenerated":false,"isUpdatedAt":false},{"name":"password","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"String","isGenerated":false,"isUpdatedAt":false},{"name":"tasks","kind":"object","isList":true,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"Task","relationName":"UserTasks","relationFromFields":[],"relationToFields":[],"isGenerated":false,"isUpdatedAt":false}],"primaryKey":null,"uniqueFields":[],"uniqueIndexes":[],"isGenerated":false}},{"name":"Task","dbName":null,"fields":[{"name":"id","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":true,"isReadOnly":false,"hasDefaultValue":true,"type":"Int","default":{"name":"autoincrement","args":[]},"isGenerated":false,"isUpdatedAt":false,"dbNames":null,"relationFromFields":null,"relationToFields":null,"relationOnDelete":null,"relationName":null,"documentation":null,"additionalProperties":{"name":"id","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":true,"isReadOnly":false,"hasDefaultValue":true,"type":"Int","default":{"name":"autoincrement","args":[]},"isGenerated":false,"isUpdatedAt":false}},{"name":"title","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"String","isGenerated":false,"isUpdatedAt":false,"dbNames":null,"default":null,"relationFromFields":null,"relationToFields":null,"relationOnDelete":null,"relationName":null,"documentation":null,"additionalProperties":{"name":"title","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"String","isGenerated":false,"isUpdatedAt":false}},{"name":"description","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"String","isGenerated":false,"isUpdatedAt":false,"dbNames":null,"default":null,"relationFromFields":null,"relationToFields":null,"relationOnDelete":null,"relationName":null,"documentation":null,"additionalProperties":{"name":"description","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"String","isGenerated":false,"isUpdatedAt":false}},{"name":"completed","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":true,"type":"Boolean","default":false,"isGenerated":false,"isUpdatedAt":false,"dbNames":null,"relationFromFields":null,"relationToFields":null,"relationOnDelete":null,"relationName":null,"documentation":null,"additionalProperties":{"name":"completed","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":true,"type":"Boolean","default":false,"isGenerated":false,"isUpdatedAt":false}},{"name":"createdAt","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":true,"type":"DateTime","default":{"name":"now","args":[]},"isGenerated":false,"isUpdatedAt":false,"dbNames":null,"relationFromFields":null,"relationToFields":null,"relationOnDelete":null,"relationName":null,"documentation":null,"additionalProperties":{"name":"createdAt","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":true,"type":"DateTime","default":{"name":"now","args":[]},"isGenerated":false,"isUpdatedAt":false}},{"name":"updatedAt","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"DateTime","isGenerated":false,"isUpdatedAt":true,"dbNames":null,"default":null,"relationFromFields":null,"relationToFields":null,"relationOnDelete":null,"relationName":null,"documentation":null,"additionalProperties":{"name":"updatedAt","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"DateTime","isGenerated":false,"isUpdatedAt":true}},{"name":"userId","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":true,"hasDefaultValue":false,"type":"Int","isGenerated":false,"isUpdatedAt":false,"dbNames":null,"default":null,"relationFromFields":null,"relationToFields":null,"relationOnDelete":null,"relationName":null,"documentation":null,"additionalProperties":{"name":"userId","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":true,"hasDefaultValue":false,"type":"Int","isGenerated":false,"isUpdatedAt":false}},{"name":"user","kind":"object","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"User","relationName":"UserTasks","relationFromFields":["userId"],"relationToFields":["id"],"isGenerated":false,"isUpdatedAt":false,"dbNames":null,"default":null,"relationOnDelete":null,"documentation":null,"additionalProperties":{"name":"user","kind":"object","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"User","relationName":"UserTasks","relationFromFields":["userId"],"relationToFields":["id"],"isGenerated":false,"isUpdatedAt":false}}],"primaryKey":null,"uniqueFields":[],"uniqueIndexes":[],"isGenerated":false,"fieldsMap":null,"documentation":null,"extra":{"name":"Task","dbName":null,"fields":[{"name":"id","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":true,"isReadOnly":false,"hasDefaultValue":true,"type":"Int","default":{"name":"autoincrement","args":[]},"isGenerated":false,"isUpdatedAt":false},{"name":"title","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"String","isGenerated":false,"isUpdatedAt":false},{"name":"description","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"String","isGenerated":false,"isUpdatedAt":false},{"name":"completed","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":true,"type":"Boolean","default":false,"isGenerated":false,"isUpdatedAt":false},{"name":"createdAt","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":true,"type":"DateTime","default":{"name":"now","args":[]},"isGenerated":false,"isUpdatedAt":false},{"name":"updatedAt","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"DateTime","isGenerated":false,"isUpdatedAt":true},{"name":"userId","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":true,"hasDefaultValue":false,"type":"Int","isGenerated":false,"isUpdatedAt":false},{"name":"user","kind":"object","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"User","relationName":"UserTasks","relationFromFields":["userId"],"relationToFields":["id"],"isGenerated":false,"isUpdatedAt":false}],"primaryKey":null,"uniqueFields":[],"uniqueIndexes":[],"isGenerated":false}}],"enums":[],"types":[]},"schema":{"rootQueryType":null,"rootMutationType":null,"inputObjectTypes":{"model":null,"prisma":[{"name":"UserWhereInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"AND","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserWhereInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"UserWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"OR","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"UserWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"NOT","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserWhereInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"UserWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"IntFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"username","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"StringFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"email","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"StringFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"password","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"StringFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"tasks","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskListRelationFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"UserOrderByWithRelationInput","constraints":{"maxNumFields":1,"minNumFields":0},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"username","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"email","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"password","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"tasks","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskOrderByRelationAggregateInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"UserWhereUniqueInput","constraints":{"maxNumFields":1,"minNumFields":1},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"email","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null}],"fieldMap":null},{"name":"UserOrderByWithAggregationInput","constraints":{"maxNumFields":1,"minNumFields":0},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"username","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"email","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"password","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"_count","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserCountOrderByAggregateInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_avg","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserAvgOrderByAggregateInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_max","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserMaxOrderByAggregateInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_min","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserMinOrderByAggregateInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_sum","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserSumOrderByAggregateInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"UserScalarWhereWithAggregatesInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"AND","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserScalarWhereWithAggregatesInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"UserScalarWhereWithAggregatesInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"OR","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"UserScalarWhereWithAggregatesInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"NOT","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserScalarWhereWithAggregatesInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"UserScalarWhereWithAggregatesInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"IntWithAggregatesFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"username","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"StringWithAggregatesFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"email","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"StringWithAggregatesFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"password","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"StringWithAggregatesFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null}],"fieldMap":null},{"name":"TaskWhereInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"AND","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"OR","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"TaskWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"NOT","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"IntFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"title","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"StringFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"description","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"StringFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"completed","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"BoolFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"Boolean","location":"scalar","namespace":null}],"deprecation":null},{"name":"createdAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTimeFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"updatedAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTimeFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"userId","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"IntFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"user","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserRelationFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"UserWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskOrderByWithRelationInput","constraints":{"maxNumFields":1,"minNumFields":0},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"title","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"description","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"completed","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"createdAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"updatedAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"userId","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"user","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserOrderByWithRelationInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskWhereUniqueInput","constraints":{"maxNumFields":1,"minNumFields":1},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null}],"fieldMap":null},{"name":"TaskOrderByWithAggregationInput","constraints":{"maxNumFields":1,"minNumFields":0},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"title","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"description","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"completed","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"createdAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"updatedAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"userId","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"_count","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskCountOrderByAggregateInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_avg","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskAvgOrderByAggregateInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_max","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskMaxOrderByAggregateInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_min","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskMinOrderByAggregateInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_sum","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskSumOrderByAggregateInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskScalarWhereWithAggregatesInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"AND","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskScalarWhereWithAggregatesInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskScalarWhereWithAggregatesInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"OR","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"TaskScalarWhereWithAggregatesInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"NOT","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskScalarWhereWithAggregatesInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskScalarWhereWithAggregatesInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"IntWithAggregatesFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"title","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"StringWithAggregatesFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"description","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"StringWithAggregatesFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"completed","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"BoolWithAggregatesFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"Boolean","location":"scalar","namespace":null}],"deprecation":null},{"name":"createdAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTimeWithAggregatesFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"updatedAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTimeWithAggregatesFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"userId","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"IntWithAggregatesFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null}],"fieldMap":null},{"name":"UserCreateInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"username","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"email","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"password","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"tasks","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskCreateNestedManyWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"UserUncheckedCreateInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"username","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"email","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"password","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"tasks","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskUncheckedCreateNestedManyWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"UserUpdateInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"username","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"email","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"password","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"tasks","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskUpdateManyWithoutUserNestedInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"UserUncheckedUpdateInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null},{"isList":false,"type":"IntFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"username","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"email","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"password","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"tasks","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskUncheckedUpdateManyWithoutUserNestedInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"UserCreateManyInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"username","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"email","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"password","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null}],"fieldMap":null},{"name":"UserUpdateManyMutationInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"username","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"email","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"password","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"UserUncheckedUpdateManyInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null},{"isList":false,"type":"IntFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"username","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"email","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"password","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskCreateInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"title","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"description","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"completed","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null}],"deprecation":null},{"name":"createdAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"updatedAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"user","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"UserCreateNestedOneWithoutTasksInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskUncheckedCreateInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"title","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"description","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"completed","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null}],"deprecation":null},{"name":"createdAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"updatedAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"userId","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null}],"fieldMap":null},{"name":"TaskUpdateInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"title","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"description","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"completed","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null},{"isList":false,"type":"BoolFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"createdAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null},{"isList":false,"type":"DateTimeFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"updatedAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null},{"isList":false,"type":"DateTimeFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"user","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserUpdateOneRequiredWithoutTasksNestedInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskUncheckedUpdateInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null},{"isList":false,"type":"IntFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"title","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"description","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"completed","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null},{"isList":false,"type":"BoolFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"createdAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null},{"isList":false,"type":"DateTimeFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"updatedAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null},{"isList":false,"type":"DateTimeFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"userId","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null},{"isList":false,"type":"IntFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskCreateManyInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"title","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"description","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"completed","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null}],"deprecation":null},{"name":"createdAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"updatedAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"userId","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null}],"fieldMap":null},{"name":"TaskUpdateManyMutationInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"title","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"description","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"completed","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null},{"isList":false,"type":"BoolFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"createdAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null},{"isList":false,"type":"DateTimeFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"updatedAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null},{"isList":false,"type":"DateTimeFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskUncheckedUpdateManyInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null},{"isList":false,"type":"IntFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"title","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"description","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"completed","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null},{"isList":false,"type":"BoolFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"createdAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null},{"isList":false,"type":"DateTimeFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"updatedAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null},{"isList":false,"type":"DateTimeFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"userId","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null},{"isList":false,"type":"IntFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"IntFilter","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"equals","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"in","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"notIn","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"lt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"lte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"gt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"gte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"not","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null},{"isList":false,"type":"NestedIntFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"StringFilter","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"equals","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"in","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"notIn","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"lt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"lte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"gt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"gte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"contains","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"startsWith","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"endsWith","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"not","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"NestedStringFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskListRelationFilter","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"every","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"some","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"none","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskOrderByRelationAggregateInput","constraints":{"maxNumFields":1,"minNumFields":1},"fields":[{"name":"_count","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"UserCountOrderByAggregateInput","constraints":{"maxNumFields":1,"minNumFields":1},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"username","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"email","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"password","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"UserAvgOrderByAggregateInput","constraints":{"maxNumFields":1,"minNumFields":1},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"UserMaxOrderByAggregateInput","constraints":{"maxNumFields":1,"minNumFields":1},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"username","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"email","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"password","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"UserMinOrderByAggregateInput","constraints":{"maxNumFields":1,"minNumFields":1},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"username","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"email","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"password","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"UserSumOrderByAggregateInput","constraints":{"maxNumFields":1,"minNumFields":1},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"IntWithAggregatesFilter","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"equals","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"in","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"notIn","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"lt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"lte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"gt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"gte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"not","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null},{"isList":false,"type":"NestedIntWithAggregatesFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_count","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedIntFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_avg","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedFloatFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_sum","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedIntFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_min","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedIntFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_max","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedIntFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"StringWithAggregatesFilter","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"equals","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"in","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"notIn","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"lt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"lte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"gt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"gte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"contains","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"startsWith","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"endsWith","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"not","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"NestedStringWithAggregatesFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_count","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedIntFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_min","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedStringFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_max","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedStringFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"BoolFilter","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"equals","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null}],"deprecation":null},{"name":"not","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null},{"isList":false,"type":"NestedBoolFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"DateTimeFilter","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"equals","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"in","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"notIn","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"lt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"lte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"gt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"gte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"not","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null},{"isList":false,"type":"NestedDateTimeFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"UserRelationFilter","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"is","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"isNot","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskCountOrderByAggregateInput","constraints":{"maxNumFields":1,"minNumFields":1},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"title","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"description","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"completed","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"createdAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"updatedAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"userId","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskAvgOrderByAggregateInput","constraints":{"maxNumFields":1,"minNumFields":1},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"userId","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskMaxOrderByAggregateInput","constraints":{"maxNumFields":1,"minNumFields":1},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"title","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"description","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"completed","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"createdAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"updatedAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"userId","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskMinOrderByAggregateInput","constraints":{"maxNumFields":1,"minNumFields":1},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"title","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"description","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"completed","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"createdAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"updatedAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"userId","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskSumOrderByAggregateInput","constraints":{"maxNumFields":1,"minNumFields":1},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"userId","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"BoolWithAggregatesFilter","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"equals","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null}],"deprecation":null},{"name":"not","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null},{"isList":false,"type":"NestedBoolWithAggregatesFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_count","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedIntFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_min","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedBoolFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_max","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedBoolFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"DateTimeWithAggregatesFilter","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"equals","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"in","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"notIn","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"lt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"lte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"gt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"gte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"not","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null},{"isList":false,"type":"NestedDateTimeWithAggregatesFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_count","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedIntFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_min","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedDateTimeFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_max","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedDateTimeFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskCreateNestedManyWithoutUserInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"create","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskCreateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskCreateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"TaskUncheckedCreateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskUncheckedCreateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"connectOrCreate","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskCreateOrConnectWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskCreateOrConnectWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"createMany","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskCreateManyUserInputEnvelope","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"connect","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskUncheckedCreateNestedManyWithoutUserInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"create","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskCreateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskCreateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"TaskUncheckedCreateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskUncheckedCreateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"connectOrCreate","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskCreateOrConnectWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskCreateOrConnectWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"createMany","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskCreateManyUserInputEnvelope","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"connect","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"StringFieldUpdateOperationsInput","constraints":{"maxNumFields":1,"minNumFields":1},"fields":[{"name":"set","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null}],"fieldMap":null},{"name":"TaskUpdateManyWithoutUserNestedInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"create","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskCreateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskCreateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"TaskUncheckedCreateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskUncheckedCreateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"connectOrCreate","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskCreateOrConnectWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskCreateOrConnectWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"upsert","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskUpsertWithWhereUniqueWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskUpsertWithWhereUniqueWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"createMany","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskCreateManyUserInputEnvelope","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"set","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"disconnect","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"delete","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"connect","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"update","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskUpdateWithWhereUniqueWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskUpdateWithWhereUniqueWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"updateMany","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskUpdateManyWithWhereWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskUpdateManyWithWhereWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"deleteMany","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskScalarWhereInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskScalarWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"IntFieldUpdateOperationsInput","constraints":{"maxNumFields":1,"minNumFields":1},"fields":[{"name":"set","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"increment","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"decrement","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"multiply","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"divide","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null}],"fieldMap":null},{"name":"TaskUncheckedUpdateManyWithoutUserNestedInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"create","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskCreateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskCreateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"TaskUncheckedCreateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskUncheckedCreateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"connectOrCreate","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskCreateOrConnectWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskCreateOrConnectWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"upsert","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskUpsertWithWhereUniqueWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskUpsertWithWhereUniqueWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"createMany","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskCreateManyUserInputEnvelope","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"set","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"disconnect","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"delete","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"connect","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"update","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskUpdateWithWhereUniqueWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskUpdateWithWhereUniqueWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"updateMany","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskUpdateManyWithWhereWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskUpdateManyWithWhereWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"deleteMany","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskScalarWhereInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskScalarWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"UserCreateNestedOneWithoutTasksInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"create","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserCreateWithoutTasksInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"UserUncheckedCreateWithoutTasksInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"connectOrCreate","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserCreateOrConnectWithoutTasksInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"connect","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"BoolFieldUpdateOperationsInput","constraints":{"maxNumFields":1,"minNumFields":1},"fields":[{"name":"set","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null}],"deprecation":null}],"fieldMap":null},{"name":"DateTimeFieldUpdateOperationsInput","constraints":{"maxNumFields":1,"minNumFields":1},"fields":[{"name":"set","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null}],"fieldMap":null},{"name":"UserUpdateOneRequiredWithoutTasksNestedInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"create","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserCreateWithoutTasksInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"UserUncheckedCreateWithoutTasksInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"connectOrCreate","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserCreateOrConnectWithoutTasksInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"upsert","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserUpsertWithoutTasksInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"connect","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"update","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserUpdateWithoutTasksInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"UserUncheckedUpdateWithoutTasksInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"NestedIntFilter","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"equals","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"in","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"notIn","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"lt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"lte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"gt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"gte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"not","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null},{"isList":false,"type":"NestedIntFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"NestedStringFilter","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"equals","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"in","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"notIn","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"lt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"lte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"gt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"gte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"contains","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"startsWith","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"endsWith","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"not","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"NestedStringFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"NestedIntWithAggregatesFilter","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"equals","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"in","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"notIn","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"lt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"lte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"gt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"gte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"not","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null},{"isList":false,"type":"NestedIntWithAggregatesFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_count","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedIntFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_avg","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedFloatFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_sum","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedIntFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_min","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedIntFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_max","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedIntFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"NestedFloatFilter","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"equals","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Float","location":"scalar","namespace":null}],"deprecation":null},{"name":"in","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"Float","location":"scalar","namespace":null}],"deprecation":null},{"name":"notIn","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"Float","location":"scalar","namespace":null}],"deprecation":null},{"name":"lt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Float","location":"scalar","namespace":null}],"deprecation":null},{"name":"lte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Float","location":"scalar","namespace":null}],"deprecation":null},{"name":"gt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Float","location":"scalar","namespace":null}],"deprecation":null},{"name":"gte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Float","location":"scalar","namespace":null}],"deprecation":null},{"name":"not","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Float","location":"scalar","namespace":null},{"isList":false,"type":"NestedFloatFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"NestedStringWithAggregatesFilter","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"equals","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"in","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"notIn","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"lt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"lte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"gt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"gte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"contains","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"startsWith","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"endsWith","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"not","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"NestedStringWithAggregatesFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_count","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedIntFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_min","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedStringFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_max","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedStringFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"NestedBoolFilter","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"equals","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null}],"deprecation":null},{"name":"not","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null},{"isList":false,"type":"NestedBoolFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"NestedDateTimeFilter","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"equals","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"in","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"notIn","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"lt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"lte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"gt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"gte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"not","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null},{"isList":false,"type":"NestedDateTimeFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"NestedBoolWithAggregatesFilter","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"equals","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null}],"deprecation":null},{"name":"not","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null},{"isList":false,"type":"NestedBoolWithAggregatesFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_count","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedIntFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_min","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedBoolFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_max","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedBoolFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"NestedDateTimeWithAggregatesFilter","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"equals","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"in","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"notIn","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"lt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"lte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"gt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"gte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"not","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null},{"isList":false,"type":"NestedDateTimeWithAggregatesFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_count","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedIntFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_min","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedDateTimeFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_max","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedDateTimeFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskCreateWithoutUserInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"title","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"description","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"completed","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null}],"deprecation":null},{"name":"createdAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"updatedAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null}],"fieldMap":null},{"name":"TaskUncheckedCreateWithoutUserInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"title","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"description","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"completed","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null}],"deprecation":null},{"name":"createdAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"updatedAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null}],"fieldMap":null},{"name":"TaskCreateOrConnectWithoutUserInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"where","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"create","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"TaskCreateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"TaskUncheckedCreateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskCreateManyUserInputEnvelope","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"data","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":true,"type":"TaskCreateManyUserInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"skipDuplicates","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null}],"deprecation":null}],"fieldMap":null},{"name":"TaskUpsertWithWhereUniqueWithoutUserInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"where","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"update","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"TaskUpdateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"TaskUncheckedUpdateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"create","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"TaskCreateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"TaskUncheckedCreateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskUpdateWithWhereUniqueWithoutUserInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"where","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"data","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"TaskUpdateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"TaskUncheckedUpdateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskUpdateManyWithWhereWithoutUserInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"where","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"TaskScalarWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"data","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"TaskUpdateManyMutationInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"TaskUncheckedUpdateManyWithoutTasksInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskScalarWhereInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"AND","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskScalarWhereInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskScalarWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"OR","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"TaskScalarWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"NOT","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskScalarWhereInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskScalarWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"IntFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"title","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"StringFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"description","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"StringFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"completed","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"BoolFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"Boolean","location":"scalar","namespace":null}],"deprecation":null},{"name":"createdAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTimeFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"updatedAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTimeFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"userId","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"IntFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null}],"fieldMap":null},{"name":"UserCreateWithoutTasksInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"username","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"email","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"password","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null}],"fieldMap":null},{"name":"UserUncheckedCreateWithoutTasksInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"username","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"email","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"password","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null}],"fieldMap":null},{"name":"UserCreateOrConnectWithoutTasksInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"where","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"UserWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"create","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"UserCreateWithoutTasksInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"UserUncheckedCreateWithoutTasksInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"UserUpsertWithoutTasksInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"update","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"UserUpdateWithoutTasksInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"UserUncheckedUpdateWithoutTasksInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"create","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"UserCreateWithoutTasksInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"UserUncheckedCreateWithoutTasksInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"UserUpdateWithoutTasksInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"username","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"email","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"password","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"UserUncheckedUpdateWithoutTasksInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null},{"isList":false,"type":"IntFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"username","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"email","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"password","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskCreateManyUserInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"title","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"description","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"completed","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null}],"deprecation":null},{"name":"createdAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"updatedAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null}],"fieldMap":null},{"name":"TaskUpdateWithoutUserInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"title","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"description","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"completed","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null},{"isList":false,"type":"BoolFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"createdAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null},{"isList":false,"type":"DateTimeFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"updatedAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null},{"isList":false,"type":"DateTimeFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskUncheckedUpdateWithoutUserInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null},{"isList":false,"type":"IntFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"title","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"description","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"completed","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null},{"isList":false,"type":"BoolFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"createdAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null},{"isList":false,"type":"DateTimeFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"updatedAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null},{"isList":false,"type":"DateTimeFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskUncheckedUpdateManyWithoutTasksInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null},{"isList":false,"type":"IntFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"title","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"description","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"completed","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null},{"isList":false,"type":"BoolFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"createdAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null},{"isList":false,"type":"DateTimeFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"updatedAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null},{"isList":false,"type":"DateTimeFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null}]},"outputObjectTypes":{"model":[{"name":"User","fields":[{"name":"id","isNullable":false,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"username","isNullable":false,"outputType":{"isList":false,"type":"String","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"email","isNullable":false,"outputType":{"isList":false,"type":"String","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"password","isNullable":false,"outputType":{"isList":false,"type":"String","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"tasks","isNullable":true,"outputType":{"isList":true,"type":"Task","location":"outputObjectTypes","namespace":"model"},"args":[{"name":"where","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"orderBy","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"TaskOrderByWithRelationInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"TaskOrderByWithRelationInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"cursor","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"take","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"skip","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"distinct","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"TaskScalarFieldEnum","location":"enumTypes","namespace":"prisma"}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"_count","isNullable":false,"outputType":{"isList":false,"type":"UserCountOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[],"deprecation":null,"documentation":null}],"fieldMap":null},{"name":"Task","fields":[{"name":"id","isNullable":false,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"title","isNullable":false,"outputType":{"isList":false,"type":"String","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"description","isNullable":false,"outputType":{"isList":false,"type":"String","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"completed","isNullable":false,"outputType":{"isList":false,"type":"Boolean","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"createdAt","isNullable":false,"outputType":{"isList":false,"type":"DateTime","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"updatedAt","isNullable":false,"outputType":{"isList":false,"type":"DateTime","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"userId","isNullable":false,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"user","isNullable":false,"outputType":{"isList":false,"type":"User","location":"outputObjectTypes","namespace":"model"},"args":[],"deprecation":null,"documentation":null}],"fieldMap":null}],"prisma":[{"name":"Query","fields":[{"name":"findFirstUser","isNullable":true,"outputType":{"isList":false,"type":"User","location":"outputObjectTypes","namespace":"model"},"args":[{"name":"where","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"orderBy","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"UserOrderByWithRelationInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"UserOrderByWithRelationInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"cursor","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"take","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"skip","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"distinct","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"UserScalarFieldEnum","location":"enumTypes","namespace":"prisma"}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"findManyUser","isNullable":false,"outputType":{"isList":true,"type":"User","location":"outputObjectTypes","namespace":"model"},"args":[{"name":"where","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"orderBy","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"UserOrderByWithRelationInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"UserOrderByWithRelationInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"cursor","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"take","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"skip","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"distinct","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"UserScalarFieldEnum","location":"enumTypes","namespace":"prisma"}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"aggregateUser","isNullable":false,"outputType":{"isList":false,"type":"AggregateUser","location":"outputObjectTypes","namespace":"prisma"},"args":[{"name":"where","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"orderBy","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"UserOrderByWithRelationInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"UserOrderByWithRelationInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"cursor","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"take","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"skip","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"groupByUser","isNullable":false,"outputType":{"isList":true,"type":"UserGroupByOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[{"name":"where","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"orderBy","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"UserOrderByWithAggregationInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"UserOrderByWithAggregationInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"by","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":true,"type":"UserScalarFieldEnum","location":"enumTypes","namespace":"prisma"},{"isList":false,"type":"UserScalarFieldEnum","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"having","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserScalarWhereWithAggregatesInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"take","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"skip","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"findUniqueUser","isNullable":true,"outputType":{"isList":false,"type":"User","location":"outputObjectTypes","namespace":"model"},"args":[{"name":"where","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"UserWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"findFirstTask","isNullable":true,"outputType":{"isList":false,"type":"Task","location":"outputObjectTypes","namespace":"model"},"args":[{"name":"where","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"orderBy","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"TaskOrderByWithRelationInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"TaskOrderByWithRelationInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"cursor","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"take","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"skip","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"distinct","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"TaskScalarFieldEnum","location":"enumTypes","namespace":"prisma"}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"findManyTask","isNullable":false,"outputType":{"isList":true,"type":"Task","location":"outputObjectTypes","namespace":"model"},"args":[{"name":"where","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"orderBy","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"TaskOrderByWithRelationInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"TaskOrderByWithRelationInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"cursor","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"take","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"skip","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"distinct","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"TaskScalarFieldEnum","location":"enumTypes","namespace":"prisma"}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"aggregateTask","isNullable":false,"outputType":{"isList":false,"type":"AggregateTask","location":"outputObjectTypes","namespace":"prisma"},"args":[{"name":"where","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"orderBy","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"TaskOrderByWithRelationInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"TaskOrderByWithRelationInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"cursor","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"take","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"skip","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"groupByTask","isNullable":false,"outputType":{"isList":true,"type":"TaskGroupByOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[{"name":"where","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"orderBy","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"TaskOrderByWithAggregationInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"TaskOrderByWithAggregationInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"by","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":true,"type":"TaskScalarFieldEnum","location":"enumTypes","namespace":"prisma"},{"isList":false,"type":"TaskScalarFieldEnum","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"having","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskScalarWhereWithAggregatesInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"take","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"skip","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"findUniqueTask","isNullable":true,"outputType":{"isList":false,"type":"Task","location":"outputObjectTypes","namespace":"model"},"args":[{"name":"where","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"deprecation":null,"documentation":null}],"fieldMap":null},{"name":"Mutation","fields":[{"name":"createOneUser","isNullable":false,"outputType":{"isList":false,"type":"User","location":"outputObjectTypes","namespace":"model"},"args":[{"name":"data","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"UserCreateInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"UserUncheckedCreateInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"upsertOneUser","isNullable":false,"outputType":{"isList":false,"type":"User","location":"outputObjectTypes","namespace":"model"},"args":[{"name":"where","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"UserWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"create","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"UserCreateInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"UserUncheckedCreateInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"update","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"UserUpdateInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"UserUncheckedUpdateInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"createManyUser","isNullable":false,"outputType":{"isList":false,"type":"AffectedRowsOutput","location":"outputObjectTypes","namespace":"prisma"},"args":[{"name":"data","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":true,"type":"UserCreateManyInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"skipDuplicates","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"deleteOneUser","isNullable":true,"outputType":{"isList":false,"type":"User","location":"outputObjectTypes","namespace":"model"},"args":[{"name":"where","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"UserWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"updateOneUser","isNullable":true,"outputType":{"isList":false,"type":"User","location":"outputObjectTypes","namespace":"model"},"args":[{"name":"data","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"UserUpdateInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"UserUncheckedUpdateInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"where","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"UserWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"updateManyUser","isNullable":false,"outputType":{"isList":false,"type":"AffectedRowsOutput","location":"outputObjectTypes","namespace":"prisma"},"args":[{"name":"data","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"UserUpdateManyMutationInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"UserUncheckedUpdateManyInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"where","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"deleteManyUser","isNullable":false,"outputType":{"isList":false,"type":"AffectedRowsOutput","location":"outputObjectTypes","namespace":"prisma"},"args":[{"name":"where","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"createOneTask","isNullable":false,"outputType":{"isList":false,"type":"Task","location":"outputObjectTypes","namespace":"model"},"args":[{"name":"data","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"TaskCreateInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"TaskUncheckedCreateInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"upsertOneTask","isNullable":false,"outputType":{"isList":false,"type":"Task","location":"outputObjectTypes","namespace":"model"},"args":[{"name":"where","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"create","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"TaskCreateInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"TaskUncheckedCreateInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"update","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"TaskUpdateInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"TaskUncheckedUpdateInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"createManyTask","isNullable":false,"outputType":{"isList":false,"type":"AffectedRowsOutput","location":"outputObjectTypes","namespace":"prisma"},"args":[{"name":"data","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":true,"type":"TaskCreateManyInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"skipDuplicates","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"deleteOneTask","isNullable":true,"outputType":{"isList":false,"type":"Task","location":"outputObjectTypes","namespace":"model"},"args":[{"name":"where","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"updateOneTask","isNullable":true,"outputType":{"isList":false,"type":"Task","location":"outputObjectTypes","namespace":"model"},"args":[{"name":"data","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"TaskUpdateInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"TaskUncheckedUpdateInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"where","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"updateManyTask","isNullable":false,"outputType":{"isList":false,"type":"AffectedRowsOutput","location":"outputObjectTypes","namespace":"prisma"},"args":[{"name":"data","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"TaskUpdateManyMutationInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"TaskUncheckedUpdateManyInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"where","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"deleteManyTask","isNullable":false,"outputType":{"isList":false,"type":"AffectedRowsOutput","location":"outputObjectTypes","namespace":"prisma"},"args":[{"name":"where","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"executeRaw","isNullable":false,"outputType":{"isList":false,"type":"Json","location":"scalar","namespace":null},"args":[{"name":"query","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"parameters","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Json","location":"scalar","namespace":null}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"queryRaw","isNullable":false,"outputType":{"isList":false,"type":"Json","location":"scalar","namespace":null},"args":[{"name":"query","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"parameters","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Json","location":"scalar","namespace":null}],"deprecation":null}],"deprecation":null,"documentation":null}],"fieldMap":null},{"name":"AggregateUser","fields":[{"name":"_count","isNullable":true,"outputType":{"isList":false,"type":"UserCountAggregateOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[],"deprecation":null,"documentation":null},{"name":"_avg","isNullable":true,"outputType":{"isList":false,"type":"UserAvgAggregateOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[],"deprecation":null,"documentation":null},{"name":"_sum","isNullable":true,"outputType":{"isList":false,"type":"UserSumAggregateOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[],"deprecation":null,"documentation":null},{"name":"_min","isNullable":true,"outputType":{"isList":false,"type":"UserMinAggregateOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[],"deprecation":null,"documentation":null},{"name":"_max","isNullable":true,"outputType":{"isList":false,"type":"UserMaxAggregateOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[],"deprecation":null,"documentation":null}],"fieldMap":null},{"name":"UserGroupByOutputType","fields":[{"name":"id","isNullable":false,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"username","isNullable":false,"outputType":{"isList":false,"type":"String","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"email","isNullable":false,"outputType":{"isList":false,"type":"String","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"password","isNullable":false,"outputType":{"isList":false,"type":"String","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"_count","isNullable":true,"outputType":{"isList":false,"type":"UserCountAggregateOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[],"deprecation":null,"documentation":null},{"name":"_avg","isNullable":true,"outputType":{"isList":false,"type":"UserAvgAggregateOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[],"deprecation":null,"documentation":null},{"name":"_sum","isNullable":true,"outputType":{"isList":false,"type":"UserSumAggregateOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[],"deprecation":null,"documentation":null},{"name":"_min","isNullable":true,"outputType":{"isList":false,"type":"UserMinAggregateOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[],"deprecation":null,"documentation":null},{"name":"_max","isNullable":true,"outputType":{"isList":false,"type":"UserMaxAggregateOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[],"deprecation":null,"documentation":null}],"fieldMap":null},{"name":"AggregateTask","fields":[{"name":"_count","isNullable":true,"outputType":{"isList":false,"type":"TaskCountAggregateOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[],"deprecation":null,"documentation":null},{"name":"_avg","isNullable":true,"outputType":{"isList":false,"type":"TaskAvgAggregateOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[],"deprecation":null,"documentation":null},{"name":"_sum","isNullable":true,"outputType":{"isList":false,"type":"TaskSumAggregateOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[],"deprecation":null,"documentation":null},{"name":"_min","isNullable":true,"outputType":{"isList":false,"type":"TaskMinAggregateOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[],"deprecation":null,"documentation":null},{"name":"_max","isNullable":true,"outputType":{"isList":false,"type":"TaskMaxAggregateOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[],"deprecation":null,"documentation":null}],"fieldMap":null},{"name":"TaskGroupByOutputType","fields":[{"name":"id","isNullable":false,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"title","isNullable":false,"outputType":{"isList":false,"type":"String","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"description","isNullable":false,"outputType":{"isList":false,"type":"String","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"completed","isNullable":false,"outputType":{"isList":false,"type":"Boolean","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"createdAt","isNullable":false,"outputType":{"isList":false,"type":"DateTime","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"updatedAt","isNullable":false,"outputType":{"isList":false,"type":"DateTime","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"userId","isNullable":false,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"_count","isNullable":true,"outputType":{"isList":false,"type":"TaskCountAggregateOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[],"deprecation":null,"documentation":null},{"name":"_avg","isNullable":true,"outputType":{"isList":false,"type":"TaskAvgAggregateOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[],"deprecation":null,"documentation":null},{"name":"_sum","isNullable":true,"outputType":{"isList":false,"type":"TaskSumAggregateOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[],"deprecation":null,"documentation":null},{"name":"_min","isNullable":true,"outputType":{"isList":false,"type":"TaskMinAggregateOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[],"deprecation":null,"documentation":null},{"name":"_max","isNullable":true,"outputType":{"isList":false,"type":"TaskMaxAggregateOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[],"deprecation":null,"documentation":null}],"fieldMap":null},{"name":"AffectedRowsOutput","fields":[{"name":"count","isNullable":false,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null}],"fieldMap":null},{"name":"UserCountOutputType","fields":[{"name":"tasks","isNullable":false,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null}],"fieldMap":null},{"name":"UserCountAggregateOutputType","fields":[{"name":"id","isNullable":false,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"username","isNullable":false,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"email","isNullable":false,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"password","isNullable":false,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"_all","isNullable":false,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null}],"fieldMap":null},{"name":"UserAvgAggregateOutputType","fields":[{"name":"id","isNullable":true,"outputType":{"isList":false,"type":"Float","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null}],"fieldMap":null},{"name":"UserSumAggregateOutputType","fields":[{"name":"id","isNullable":true,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null}],"fieldMap":null},{"name":"UserMinAggregateOutputType","fields":[{"name":"id","isNullable":true,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"username","isNullable":true,"outputType":{"isList":false,"type":"String","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"email","isNullable":true,"outputType":{"isList":false,"type":"String","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"password","isNullable":true,"outputType":{"isList":false,"type":"String","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null}],"fieldMap":null},{"name":"UserMaxAggregateOutputType","fields":[{"name":"id","isNullable":true,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"username","isNullable":true,"outputType":{"isList":false,"type":"String","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"email","isNullable":true,"outputType":{"isList":false,"type":"String","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"password","isNullable":true,"outputType":{"isList":false,"type":"String","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null}],"fieldMap":null},{"name":"TaskCountAggregateOutputType","fields":[{"name":"id","isNullable":false,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"title","isNullable":false,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"description","isNullable":false,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"completed","isNullable":false,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"createdAt","isNullable":false,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"updatedAt","isNullable":false,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"userId","isNullable":false,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"_all","isNullable":false,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null}],"fieldMap":null},{"name":"TaskAvgAggregateOutputType","fields":[{"name":"id","isNullable":true,"outputType":{"isList":false,"type":"Float","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"userId","isNullable":true,"outputType":{"isList":false,"type":"Float","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null}],"fieldMap":null},{"name":"TaskSumAggregateOutputType","fields":[{"name":"id","isNullable":true,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"userId","isNullable":true,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null}],"fieldMap":null},{"name":"TaskMinAggregateOutputType","fields":[{"name":"id","isNullable":true,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"title","isNullable":true,"outputType":{"isList":false,"type":"String","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"description","isNullable":true,"outputType":{"isList":false,"type":"String","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"completed","isNullable":true,"outputType":{"isList":false,"type":"Boolean","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"createdAt","isNullable":true,"outputType":{"isList":false,"type":"DateTime","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"updatedAt","isNullable":true,"outputType":{"isList":false,"type":"DateTime","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"userId","isNullable":true,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null}],"fieldMap":null},{"name":"TaskMaxAggregateOutputType","fields":[{"name":"id","isNullable":true,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"title","isNullable":true,"outputType":{"isList":false,"type":"String","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"description","isNullable":true,"outputType":{"isList":false,"type":"String","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"completed","isNullable":true,"outputType":{"isList":false,"type":"Boolean","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"createdAt","isNullable":true,"outputType":{"isList":false,"type":"DateTime","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"updatedAt","isNullable":true,"outputType":{"isList":false,"type":"DateTime","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"userId","isNullable":true,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null}],"fieldMap":null}]},"enumTypes":{"model":null,"prisma":[{"name":"SortOrder","values":["asc","desc"]},{"name":"TaskScalarFieldEnum","values":["id","title","description","completed","createdAt","updatedAt","userId"]},{"name":"TransactionIsolationLevel","values":["ReadUncommitted","ReadCommitted","RepeatableRead","Serializable"]},{"name":"UserScalarFieldEnum","values":["id","username","email","password"]}]}},"mappings":{"modelOperations":[{"model":"User","findUnique":"findUniqueUser","findFirst":"findFirstUser","findMany":"findManyUser","create":"createOneUser","createMany":"createManyUser","update":"updateOneUser","updateMany":"updateManyUser","upsert":"upsertOneUser","delete":"deleteOneUser","deleteMany":"deleteManyUser","aggregate":"aggregateUser","groupBy":"groupByUser","findRaw":null,"aggregateRaw":null},{"model":"Task","findUnique":"findUniqueTask","findFirst":"findFirstTask","findMany":"findManyTask","create":"createOneTask","createMany":"createManyTask","update":"updateOneTask","updateMany":"updateManyTask","upsert":"upsertOneTask","delete":"deleteOneTask","deleteMany":"deleteManyTask","aggregate":"aggregateTask","groupBy":"groupByTask","findRaw":null,"aggregateRaw":null}],"otherOperations":{"read":[],"write":["executeRaw","queryRaw"]}}}';
+const String _dmmfStr = '{"datamodel":{"models":[{"name":"User","dbName":null,"fields":[{"name":"id","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":true,"isReadOnly":false,"hasDefaultValue":true,"type":"Int","default":{"name":"autoincrement","args":[]},"isGenerated":false,"isUpdatedAt":false,"dbNames":null,"relationFromFields":null,"relationToFields":null,"relationOnDelete":null,"relationName":null,"documentation":null,"additionalProperties":{"name":"id","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":true,"isReadOnly":false,"hasDefaultValue":true,"type":"Int","default":{"name":"autoincrement","args":[]},"isGenerated":false,"isUpdatedAt":false}},{"name":"username","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"String","isGenerated":false,"isUpdatedAt":false,"dbNames":null,"default":null,"relationFromFields":null,"relationToFields":null,"relationOnDelete":null,"relationName":null,"documentation":null,"additionalProperties":{"name":"username","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"String","isGenerated":false,"isUpdatedAt":false}},{"name":"email","kind":"scalar","isList":false,"isRequired":true,"isUnique":true,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"String","isGenerated":false,"isUpdatedAt":false,"dbNames":null,"default":null,"relationFromFields":null,"relationToFields":null,"relationOnDelete":null,"relationName":null,"documentation":null,"additionalProperties":{"name":"email","kind":"scalar","isList":false,"isRequired":true,"isUnique":true,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"String","isGenerated":false,"isUpdatedAt":false}},{"name":"password","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"String","isGenerated":false,"isUpdatedAt":false,"dbNames":null,"default":null,"relationFromFields":null,"relationToFields":null,"relationOnDelete":null,"relationName":null,"documentation":null,"additionalProperties":{"name":"password","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"String","isGenerated":false,"isUpdatedAt":false}},{"name":"tasks","kind":"object","isList":true,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"Task","relationName":"UserTasks","relationFromFields":[],"relationToFields":[],"isGenerated":false,"isUpdatedAt":false,"dbNames":null,"default":null,"relationOnDelete":null,"documentation":null,"additionalProperties":{"name":"tasks","kind":"object","isList":true,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"Task","relationName":"UserTasks","relationFromFields":[],"relationToFields":[],"isGenerated":false,"isUpdatedAt":false}}],"primaryKey":null,"uniqueFields":[],"uniqueIndexes":[],"isGenerated":false,"fieldsMap":null,"documentation":null,"extra":{"name":"User","dbName":null,"fields":[{"name":"id","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":true,"isReadOnly":false,"hasDefaultValue":true,"type":"Int","default":{"name":"autoincrement","args":[]},"isGenerated":false,"isUpdatedAt":false},{"name":"username","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"String","isGenerated":false,"isUpdatedAt":false},{"name":"email","kind":"scalar","isList":false,"isRequired":true,"isUnique":true,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"String","isGenerated":false,"isUpdatedAt":false},{"name":"password","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"String","isGenerated":false,"isUpdatedAt":false},{"name":"tasks","kind":"object","isList":true,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"Task","relationName":"UserTasks","relationFromFields":[],"relationToFields":[],"isGenerated":false,"isUpdatedAt":false}],"primaryKey":null,"uniqueFields":[],"uniqueIndexes":[],"isGenerated":false}},{"name":"Task","dbName":null,"fields":[{"name":"id","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":true,"isReadOnly":false,"hasDefaultValue":true,"type":"Int","default":{"name":"autoincrement","args":[]},"isGenerated":false,"isUpdatedAt":false,"dbNames":null,"relationFromFields":null,"relationToFields":null,"relationOnDelete":null,"relationName":null,"documentation":null,"additionalProperties":{"name":"id","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":true,"isReadOnly":false,"hasDefaultValue":true,"type":"Int","default":{"name":"autoincrement","args":[]},"isGenerated":false,"isUpdatedAt":false}},{"name":"title","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"String","isGenerated":false,"isUpdatedAt":false,"dbNames":null,"default":null,"relationFromFields":null,"relationToFields":null,"relationOnDelete":null,"relationName":null,"documentation":null,"additionalProperties":{"name":"title","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"String","isGenerated":false,"isUpdatedAt":false}},{"name":"description","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"String","isGenerated":false,"isUpdatedAt":false,"dbNames":null,"default":null,"relationFromFields":null,"relationToFields":null,"relationOnDelete":null,"relationName":null,"documentation":null,"additionalProperties":{"name":"description","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"String","isGenerated":false,"isUpdatedAt":false}},{"name":"completed","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":true,"type":"Boolean","default":false,"isGenerated":false,"isUpdatedAt":false,"dbNames":null,"relationFromFields":null,"relationToFields":null,"relationOnDelete":null,"relationName":null,"documentation":null,"additionalProperties":{"name":"completed","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":true,"type":"Boolean","default":false,"isGenerated":false,"isUpdatedAt":false}},{"name":"createdAt","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":true,"type":"DateTime","default":{"name":"now","args":[]},"isGenerated":false,"isUpdatedAt":false,"dbNames":null,"relationFromFields":null,"relationToFields":null,"relationOnDelete":null,"relationName":null,"documentation":null,"additionalProperties":{"name":"createdAt","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":true,"type":"DateTime","default":{"name":"now","args":[]},"isGenerated":false,"isUpdatedAt":false}},{"name":"updatedAt","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"DateTime","isGenerated":false,"isUpdatedAt":true,"dbNames":null,"default":null,"relationFromFields":null,"relationToFields":null,"relationOnDelete":null,"relationName":null,"documentation":null,"additionalProperties":{"name":"updatedAt","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"DateTime","isGenerated":false,"isUpdatedAt":true}},{"name":"userId","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":true,"hasDefaultValue":false,"type":"Int","isGenerated":false,"isUpdatedAt":false,"dbNames":null,"default":null,"relationFromFields":null,"relationToFields":null,"relationOnDelete":null,"relationName":null,"documentation":null,"additionalProperties":{"name":"userId","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":true,"hasDefaultValue":false,"type":"Int","isGenerated":false,"isUpdatedAt":false}},{"name":"user","kind":"object","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"User","relationName":"UserTasks","relationFromFields":["userId"],"relationToFields":["id"],"isGenerated":false,"isUpdatedAt":false,"dbNames":null,"default":null,"relationOnDelete":null,"documentation":null,"additionalProperties":{"name":"user","kind":"object","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"User","relationName":"UserTasks","relationFromFields":["userId"],"relationToFields":["id"],"isGenerated":false,"isUpdatedAt":false}}],"primaryKey":null,"uniqueFields":[],"uniqueIndexes":[],"isGenerated":false,"fieldsMap":null,"documentation":null,"extra":{"name":"Task","dbName":null,"fields":[{"name":"id","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":true,"isReadOnly":false,"hasDefaultValue":true,"type":"Int","default":{"name":"autoincrement","args":[]},"isGenerated":false,"isUpdatedAt":false},{"name":"title","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"String","isGenerated":false,"isUpdatedAt":false},{"name":"description","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"String","isGenerated":false,"isUpdatedAt":false},{"name":"completed","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":true,"type":"Boolean","default":false,"isGenerated":false,"isUpdatedAt":false},{"name":"createdAt","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":true,"type":"DateTime","default":{"name":"now","args":[]},"isGenerated":false,"isUpdatedAt":false},{"name":"updatedAt","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"DateTime","isGenerated":false,"isUpdatedAt":true},{"name":"userId","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":true,"hasDefaultValue":false,"type":"Int","isGenerated":false,"isUpdatedAt":false},{"name":"user","kind":"object","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"User","relationName":"UserTasks","relationFromFields":["userId"],"relationToFields":["id"],"isGenerated":false,"isUpdatedAt":false}],"primaryKey":null,"uniqueFields":[],"uniqueIndexes":[],"isGenerated":false}}],"enums":[],"types":[]},"schema":{"rootQueryType":null,"rootMutationType":null,"inputObjectTypes":{"model":null,"prisma":[{"name":"UserWhereInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"AND","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserWhereInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"UserWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"OR","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"UserWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"NOT","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserWhereInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"UserWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"IntFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"username","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"StringFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"email","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"StringFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"password","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"StringFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"tasks","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskListRelationFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"UserOrderByWithRelationInput","constraints":{"maxNumFields":1,"minNumFields":0},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"username","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"email","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"password","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"tasks","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskOrderByRelationAggregateInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"UserWhereUniqueInput","constraints":{"maxNumFields":1,"minNumFields":1},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"email","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null}],"fieldMap":null},{"name":"UserOrderByWithAggregationInput","constraints":{"maxNumFields":1,"minNumFields":0},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"username","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"email","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"password","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"_count","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserCountOrderByAggregateInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_avg","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserAvgOrderByAggregateInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_max","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserMaxOrderByAggregateInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_min","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserMinOrderByAggregateInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_sum","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserSumOrderByAggregateInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"UserScalarWhereWithAggregatesInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"AND","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserScalarWhereWithAggregatesInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"UserScalarWhereWithAggregatesInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"OR","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"UserScalarWhereWithAggregatesInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"NOT","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserScalarWhereWithAggregatesInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"UserScalarWhereWithAggregatesInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"IntWithAggregatesFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"username","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"StringWithAggregatesFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"email","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"StringWithAggregatesFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"password","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"StringWithAggregatesFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null}],"fieldMap":null},{"name":"TaskWhereInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"AND","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"OR","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"TaskWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"NOT","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"IntFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"title","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"StringFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"description","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"StringFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"completed","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"BoolFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"Boolean","location":"scalar","namespace":null}],"deprecation":null},{"name":"createdAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTimeFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"updatedAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTimeFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"userId","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"IntFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"user","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserRelationFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"UserWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskOrderByWithRelationInput","constraints":{"maxNumFields":1,"minNumFields":0},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"title","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"description","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"completed","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"createdAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"updatedAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"userId","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"user","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserOrderByWithRelationInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskWhereUniqueInput","constraints":{"maxNumFields":1,"minNumFields":1},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null}],"fieldMap":null},{"name":"TaskOrderByWithAggregationInput","constraints":{"maxNumFields":1,"minNumFields":0},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"title","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"description","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"completed","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"createdAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"updatedAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"userId","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"_count","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskCountOrderByAggregateInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_avg","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskAvgOrderByAggregateInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_max","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskMaxOrderByAggregateInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_min","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskMinOrderByAggregateInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_sum","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskSumOrderByAggregateInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskScalarWhereWithAggregatesInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"AND","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskScalarWhereWithAggregatesInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskScalarWhereWithAggregatesInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"OR","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"TaskScalarWhereWithAggregatesInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"NOT","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskScalarWhereWithAggregatesInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskScalarWhereWithAggregatesInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"IntWithAggregatesFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"title","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"StringWithAggregatesFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"description","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"StringWithAggregatesFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"completed","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"BoolWithAggregatesFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"Boolean","location":"scalar","namespace":null}],"deprecation":null},{"name":"createdAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTimeWithAggregatesFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"updatedAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTimeWithAggregatesFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"userId","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"IntWithAggregatesFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null}],"fieldMap":null},{"name":"UserCreateInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"username","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"email","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"password","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"tasks","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskCreateNestedManyWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"UserUncheckedCreateInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"username","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"email","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"password","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"tasks","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskUncheckedCreateNestedManyWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"UserUpdateInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"username","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"email","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"password","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"tasks","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskUpdateManyWithoutUserNestedInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"UserUncheckedUpdateInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null},{"isList":false,"type":"IntFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"username","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"email","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"password","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"tasks","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskUncheckedUpdateManyWithoutUserNestedInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"UserCreateManyInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"username","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"email","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"password","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null}],"fieldMap":null},{"name":"UserUpdateManyMutationInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"username","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"email","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"password","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"UserUncheckedUpdateManyInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null},{"isList":false,"type":"IntFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"username","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"email","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"password","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskCreateInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"title","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"description","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"completed","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null}],"deprecation":null},{"name":"createdAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"updatedAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"user","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"UserCreateNestedOneWithoutTasksInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskUncheckedCreateInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"title","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"description","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"completed","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null}],"deprecation":null},{"name":"createdAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"updatedAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"userId","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null}],"fieldMap":null},{"name":"TaskUpdateInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"title","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"description","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"completed","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null},{"isList":false,"type":"BoolFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"createdAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null},{"isList":false,"type":"DateTimeFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"updatedAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null},{"isList":false,"type":"DateTimeFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"user","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserUpdateOneRequiredWithoutTasksNestedInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskUncheckedUpdateInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null},{"isList":false,"type":"IntFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"title","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"description","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"completed","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null},{"isList":false,"type":"BoolFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"createdAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null},{"isList":false,"type":"DateTimeFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"updatedAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null},{"isList":false,"type":"DateTimeFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"userId","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null},{"isList":false,"type":"IntFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskCreateManyInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"title","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"description","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"completed","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null}],"deprecation":null},{"name":"createdAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"updatedAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"userId","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null}],"fieldMap":null},{"name":"TaskUpdateManyMutationInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"title","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"description","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"completed","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null},{"isList":false,"type":"BoolFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"createdAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null},{"isList":false,"type":"DateTimeFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"updatedAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null},{"isList":false,"type":"DateTimeFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskUncheckedUpdateManyInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null},{"isList":false,"type":"IntFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"title","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"description","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"completed","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null},{"isList":false,"type":"BoolFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"createdAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null},{"isList":false,"type":"DateTimeFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"updatedAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null},{"isList":false,"type":"DateTimeFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"userId","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null},{"isList":false,"type":"IntFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"IntFilter","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"equals","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"in","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"notIn","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"lt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"lte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"gt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"gte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"not","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null},{"isList":false,"type":"NestedIntFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"StringFilter","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"equals","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"in","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"notIn","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"lt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"lte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"gt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"gte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"contains","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"startsWith","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"endsWith","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"not","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"NestedStringFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskListRelationFilter","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"every","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"some","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"none","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskOrderByRelationAggregateInput","constraints":{"maxNumFields":1,"minNumFields":1},"fields":[{"name":"_count","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"UserCountOrderByAggregateInput","constraints":{"maxNumFields":1,"minNumFields":1},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"username","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"email","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"password","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"UserAvgOrderByAggregateInput","constraints":{"maxNumFields":1,"minNumFields":1},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"UserMaxOrderByAggregateInput","constraints":{"maxNumFields":1,"minNumFields":1},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"username","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"email","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"password","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"UserMinOrderByAggregateInput","constraints":{"maxNumFields":1,"minNumFields":1},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"username","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"email","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"password","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"UserSumOrderByAggregateInput","constraints":{"maxNumFields":1,"minNumFields":1},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"IntWithAggregatesFilter","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"equals","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"in","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"notIn","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"lt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"lte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"gt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"gte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"not","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null},{"isList":false,"type":"NestedIntWithAggregatesFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_count","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedIntFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_avg","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedFloatFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_sum","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedIntFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_min","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedIntFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_max","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedIntFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"StringWithAggregatesFilter","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"equals","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"in","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"notIn","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"lt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"lte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"gt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"gte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"contains","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"startsWith","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"endsWith","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"not","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"NestedStringWithAggregatesFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_count","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedIntFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_min","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedStringFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_max","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedStringFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"BoolFilter","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"equals","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null}],"deprecation":null},{"name":"not","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null},{"isList":false,"type":"NestedBoolFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"DateTimeFilter","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"equals","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"in","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"notIn","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"lt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"lte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"gt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"gte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"not","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null},{"isList":false,"type":"NestedDateTimeFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"UserRelationFilter","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"is","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"isNot","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskCountOrderByAggregateInput","constraints":{"maxNumFields":1,"minNumFields":1},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"title","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"description","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"completed","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"createdAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"updatedAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"userId","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskAvgOrderByAggregateInput","constraints":{"maxNumFields":1,"minNumFields":1},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"userId","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskMaxOrderByAggregateInput","constraints":{"maxNumFields":1,"minNumFields":1},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"title","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"description","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"completed","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"createdAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"updatedAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"userId","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskMinOrderByAggregateInput","constraints":{"maxNumFields":1,"minNumFields":1},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"title","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"description","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"completed","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"createdAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"updatedAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"userId","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskSumOrderByAggregateInput","constraints":{"maxNumFields":1,"minNumFields":1},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"userId","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"SortOrder","location":"enumTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"BoolWithAggregatesFilter","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"equals","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null}],"deprecation":null},{"name":"not","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null},{"isList":false,"type":"NestedBoolWithAggregatesFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_count","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedIntFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_min","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedBoolFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_max","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedBoolFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"DateTimeWithAggregatesFilter","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"equals","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"in","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"notIn","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"lt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"lte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"gt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"gte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"not","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null},{"isList":false,"type":"NestedDateTimeWithAggregatesFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_count","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedIntFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_min","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedDateTimeFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_max","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedDateTimeFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskCreateNestedManyWithoutUserInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"create","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskCreateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskCreateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"TaskUncheckedCreateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskUncheckedCreateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"connectOrCreate","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskCreateOrConnectWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskCreateOrConnectWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"createMany","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskCreateManyUserInputEnvelope","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"connect","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskUncheckedCreateNestedManyWithoutUserInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"create","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskCreateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskCreateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"TaskUncheckedCreateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskUncheckedCreateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"connectOrCreate","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskCreateOrConnectWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskCreateOrConnectWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"createMany","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskCreateManyUserInputEnvelope","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"connect","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"StringFieldUpdateOperationsInput","constraints":{"maxNumFields":1,"minNumFields":1},"fields":[{"name":"set","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null}],"fieldMap":null},{"name":"TaskUpdateManyWithoutUserNestedInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"create","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskCreateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskCreateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"TaskUncheckedCreateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskUncheckedCreateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"connectOrCreate","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskCreateOrConnectWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskCreateOrConnectWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"upsert","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskUpsertWithWhereUniqueWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskUpsertWithWhereUniqueWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"createMany","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskCreateManyUserInputEnvelope","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"set","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"disconnect","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"delete","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"connect","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"update","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskUpdateWithWhereUniqueWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskUpdateWithWhereUniqueWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"updateMany","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskUpdateManyWithWhereWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskUpdateManyWithWhereWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"deleteMany","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskScalarWhereInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskScalarWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"IntFieldUpdateOperationsInput","constraints":{"maxNumFields":1,"minNumFields":1},"fields":[{"name":"set","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"increment","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"decrement","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"multiply","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"divide","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null}],"fieldMap":null},{"name":"TaskUncheckedUpdateManyWithoutUserNestedInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"create","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskCreateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskCreateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"TaskUncheckedCreateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskUncheckedCreateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"connectOrCreate","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskCreateOrConnectWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskCreateOrConnectWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"upsert","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskUpsertWithWhereUniqueWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskUpsertWithWhereUniqueWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"createMany","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskCreateManyUserInputEnvelope","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"set","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"disconnect","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"delete","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"connect","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"update","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskUpdateWithWhereUniqueWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskUpdateWithWhereUniqueWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"updateMany","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskUpdateManyWithWhereWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskUpdateManyWithWhereWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"deleteMany","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskScalarWhereInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskScalarWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"UserCreateNestedOneWithoutTasksInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"create","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserCreateWithoutTasksInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"UserUncheckedCreateWithoutTasksInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"connectOrCreate","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserCreateOrConnectWithoutTasksInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"connect","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"BoolFieldUpdateOperationsInput","constraints":{"maxNumFields":1,"minNumFields":1},"fields":[{"name":"set","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null}],"deprecation":null}],"fieldMap":null},{"name":"DateTimeFieldUpdateOperationsInput","constraints":{"maxNumFields":1,"minNumFields":1},"fields":[{"name":"set","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null}],"fieldMap":null},{"name":"UserUpdateOneRequiredWithoutTasksNestedInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"create","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserCreateWithoutTasksInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"UserUncheckedCreateWithoutTasksInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"connectOrCreate","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserCreateOrConnectWithoutTasksInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"upsert","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserUpsertWithoutTasksInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"connect","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"update","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserUpdateWithoutTasksInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"UserUncheckedUpdateWithoutTasksInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"NestedIntFilter","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"equals","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"in","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"notIn","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"lt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"lte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"gt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"gte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"not","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null},{"isList":false,"type":"NestedIntFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"NestedStringFilter","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"equals","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"in","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"notIn","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"lt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"lte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"gt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"gte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"contains","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"startsWith","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"endsWith","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"not","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"NestedStringFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"NestedIntWithAggregatesFilter","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"equals","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"in","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"notIn","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"lt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"lte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"gt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"gte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"not","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null},{"isList":false,"type":"NestedIntWithAggregatesFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_count","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedIntFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_avg","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedFloatFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_sum","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedIntFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_min","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedIntFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_max","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedIntFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"NestedFloatFilter","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"equals","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Float","location":"scalar","namespace":null}],"deprecation":null},{"name":"in","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"Float","location":"scalar","namespace":null}],"deprecation":null},{"name":"notIn","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"Float","location":"scalar","namespace":null}],"deprecation":null},{"name":"lt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Float","location":"scalar","namespace":null}],"deprecation":null},{"name":"lte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Float","location":"scalar","namespace":null}],"deprecation":null},{"name":"gt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Float","location":"scalar","namespace":null}],"deprecation":null},{"name":"gte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Float","location":"scalar","namespace":null}],"deprecation":null},{"name":"not","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Float","location":"scalar","namespace":null},{"isList":false,"type":"NestedFloatFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"NestedStringWithAggregatesFilter","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"equals","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"in","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"notIn","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"lt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"lte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"gt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"gte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"contains","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"startsWith","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"endsWith","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"not","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"NestedStringWithAggregatesFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_count","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedIntFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_min","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedStringFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_max","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedStringFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"NestedBoolFilter","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"equals","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null}],"deprecation":null},{"name":"not","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null},{"isList":false,"type":"NestedBoolFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"NestedDateTimeFilter","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"equals","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"in","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"notIn","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"lt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"lte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"gt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"gte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"not","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null},{"isList":false,"type":"NestedDateTimeFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"NestedBoolWithAggregatesFilter","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"equals","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null}],"deprecation":null},{"name":"not","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null},{"isList":false,"type":"NestedBoolWithAggregatesFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_count","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedIntFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_min","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedBoolFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_max","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedBoolFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"NestedDateTimeWithAggregatesFilter","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"equals","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"in","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"notIn","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"lt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"lte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"gt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"gte","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"not","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null},{"isList":false,"type":"NestedDateTimeWithAggregatesFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_count","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedIntFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_min","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedDateTimeFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"_max","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"NestedDateTimeFilter","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskCreateWithoutUserInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"title","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"description","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"completed","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null}],"deprecation":null},{"name":"createdAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"updatedAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null}],"fieldMap":null},{"name":"TaskUncheckedCreateWithoutUserInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"title","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"description","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"completed","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null}],"deprecation":null},{"name":"createdAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"updatedAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null}],"fieldMap":null},{"name":"TaskCreateOrConnectWithoutUserInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"where","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"create","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"TaskCreateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"TaskUncheckedCreateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskCreateManyUserInputEnvelope","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"data","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":true,"type":"TaskCreateManyUserInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"skipDuplicates","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null}],"deprecation":null}],"fieldMap":null},{"name":"TaskUpsertWithWhereUniqueWithoutUserInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"where","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"update","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"TaskUpdateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"TaskUncheckedUpdateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"create","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"TaskCreateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"TaskUncheckedCreateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskUpdateWithWhereUniqueWithoutUserInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"where","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"data","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"TaskUpdateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"TaskUncheckedUpdateWithoutUserInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskUpdateManyWithWhereWithoutUserInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"where","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"TaskScalarWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"data","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"TaskUpdateManyMutationInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"TaskUncheckedUpdateManyWithoutTasksInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskScalarWhereInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"AND","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskScalarWhereInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskScalarWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"OR","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"TaskScalarWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"NOT","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskScalarWhereInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":true,"type":"TaskScalarWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"IntFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"title","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"StringFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"description","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"StringFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"completed","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"BoolFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"Boolean","location":"scalar","namespace":null}],"deprecation":null},{"name":"createdAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTimeFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"updatedAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTimeFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"userId","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"IntFilter","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null}],"fieldMap":null},{"name":"UserCreateWithoutTasksInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"username","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"email","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"password","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null}],"fieldMap":null},{"name":"UserUncheckedCreateWithoutTasksInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"username","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"email","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"password","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null}],"fieldMap":null},{"name":"UserCreateOrConnectWithoutTasksInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"where","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"UserWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"create","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"UserCreateWithoutTasksInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"UserUncheckedCreateWithoutTasksInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"UserUpsertWithoutTasksInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"update","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"UserUpdateWithoutTasksInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"UserUncheckedUpdateWithoutTasksInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"create","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"UserCreateWithoutTasksInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"UserUncheckedCreateWithoutTasksInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"UserUpdateWithoutTasksInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"username","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"email","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"password","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"UserUncheckedUpdateWithoutTasksInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null},{"isList":false,"type":"IntFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"username","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"email","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"password","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskCreateManyUserInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"title","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"description","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"completed","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null}],"deprecation":null},{"name":"createdAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null},{"name":"updatedAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null}],"deprecation":null}],"fieldMap":null},{"name":"TaskUpdateWithoutUserInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"title","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"description","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"completed","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null},{"isList":false,"type":"BoolFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"createdAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null},{"isList":false,"type":"DateTimeFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"updatedAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null},{"isList":false,"type":"DateTimeFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskUncheckedUpdateWithoutUserInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null},{"isList":false,"type":"IntFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"title","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"description","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"completed","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null},{"isList":false,"type":"BoolFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"createdAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null},{"isList":false,"type":"DateTimeFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"updatedAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null},{"isList":false,"type":"DateTimeFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null},{"name":"TaskUncheckedUpdateManyWithoutTasksInput","constraints":{"maxNumFields":null,"minNumFields":null},"fields":[{"name":"id","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null},{"isList":false,"type":"IntFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"title","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"description","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null},{"isList":false,"type":"StringFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"completed","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null},{"isList":false,"type":"BoolFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"createdAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null},{"isList":false,"type":"DateTimeFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"updatedAt","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"DateTime","location":"scalar","namespace":null},{"isList":false,"type":"DateTimeFieldUpdateOperationsInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"fieldMap":null}]},"outputObjectTypes":{"model":[{"name":"User","fields":[{"name":"id","isNullable":false,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"username","isNullable":false,"outputType":{"isList":false,"type":"String","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"email","isNullable":false,"outputType":{"isList":false,"type":"String","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"password","isNullable":false,"outputType":{"isList":false,"type":"String","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"tasks","isNullable":true,"outputType":{"isList":true,"type":"Task","location":"outputObjectTypes","namespace":"model"},"args":[{"name":"where","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"orderBy","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"TaskOrderByWithRelationInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"TaskOrderByWithRelationInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"cursor","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"take","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"skip","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"distinct","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"TaskScalarFieldEnum","location":"enumTypes","namespace":"prisma"}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"_count","isNullable":false,"outputType":{"isList":false,"type":"UserCountOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[],"deprecation":null,"documentation":null}],"fieldMap":null},{"name":"Task","fields":[{"name":"id","isNullable":false,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"title","isNullable":false,"outputType":{"isList":false,"type":"String","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"description","isNullable":false,"outputType":{"isList":false,"type":"String","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"completed","isNullable":false,"outputType":{"isList":false,"type":"Boolean","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"createdAt","isNullable":false,"outputType":{"isList":false,"type":"DateTime","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"updatedAt","isNullable":false,"outputType":{"isList":false,"type":"DateTime","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"userId","isNullable":false,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"user","isNullable":false,"outputType":{"isList":false,"type":"User","location":"outputObjectTypes","namespace":"model"},"args":[],"deprecation":null,"documentation":null}],"fieldMap":null}],"prisma":[{"name":"Query","fields":[{"name":"findFirstUser","isNullable":true,"outputType":{"isList":false,"type":"User","location":"outputObjectTypes","namespace":"model"},"args":[{"name":"where","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"orderBy","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"UserOrderByWithRelationInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"UserOrderByWithRelationInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"cursor","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"take","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"skip","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"distinct","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"UserScalarFieldEnum","location":"enumTypes","namespace":"prisma"}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"findManyUser","isNullable":false,"outputType":{"isList":true,"type":"User","location":"outputObjectTypes","namespace":"model"},"args":[{"name":"where","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"orderBy","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"UserOrderByWithRelationInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"UserOrderByWithRelationInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"cursor","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"take","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"skip","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"distinct","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"UserScalarFieldEnum","location":"enumTypes","namespace":"prisma"}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"aggregateUser","isNullable":false,"outputType":{"isList":false,"type":"AggregateUser","location":"outputObjectTypes","namespace":"prisma"},"args":[{"name":"where","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"orderBy","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"UserOrderByWithRelationInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"UserOrderByWithRelationInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"cursor","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"take","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"skip","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"groupByUser","isNullable":false,"outputType":{"isList":true,"type":"UserGroupByOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[{"name":"where","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"orderBy","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"UserOrderByWithAggregationInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"UserOrderByWithAggregationInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"by","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":true,"type":"UserScalarFieldEnum","location":"enumTypes","namespace":"prisma"},{"isList":false,"type":"UserScalarFieldEnum","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"having","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserScalarWhereWithAggregatesInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"take","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"skip","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"findUniqueUser","isNullable":true,"outputType":{"isList":false,"type":"User","location":"outputObjectTypes","namespace":"model"},"args":[{"name":"where","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"UserWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"findFirstTask","isNullable":true,"outputType":{"isList":false,"type":"Task","location":"outputObjectTypes","namespace":"model"},"args":[{"name":"where","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"orderBy","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"TaskOrderByWithRelationInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"TaskOrderByWithRelationInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"cursor","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"take","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"skip","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"distinct","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"TaskScalarFieldEnum","location":"enumTypes","namespace":"prisma"}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"findManyTask","isNullable":false,"outputType":{"isList":true,"type":"Task","location":"outputObjectTypes","namespace":"model"},"args":[{"name":"where","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"orderBy","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"TaskOrderByWithRelationInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"TaskOrderByWithRelationInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"cursor","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"take","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"skip","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"distinct","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"TaskScalarFieldEnum","location":"enumTypes","namespace":"prisma"}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"aggregateTask","isNullable":false,"outputType":{"isList":false,"type":"AggregateTask","location":"outputObjectTypes","namespace":"prisma"},"args":[{"name":"where","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"orderBy","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"TaskOrderByWithRelationInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"TaskOrderByWithRelationInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"cursor","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"take","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"skip","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"groupByTask","isNullable":false,"outputType":{"isList":true,"type":"TaskGroupByOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[{"name":"where","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"orderBy","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":true,"type":"TaskOrderByWithAggregationInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"TaskOrderByWithAggregationInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"by","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":true,"type":"TaskScalarFieldEnum","location":"enumTypes","namespace":"prisma"},{"isList":false,"type":"TaskScalarFieldEnum","location":"enumTypes","namespace":"prisma"}],"deprecation":null},{"name":"having","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskScalarWhereWithAggregatesInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"take","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null},{"name":"skip","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Int","location":"scalar","namespace":null}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"findUniqueTask","isNullable":true,"outputType":{"isList":false,"type":"Task","location":"outputObjectTypes","namespace":"model"},"args":[{"name":"where","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"deprecation":null,"documentation":null}],"fieldMap":null},{"name":"Mutation","fields":[{"name":"createOneUser","isNullable":false,"outputType":{"isList":false,"type":"User","location":"outputObjectTypes","namespace":"model"},"args":[{"name":"data","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"UserCreateInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"UserUncheckedCreateInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"upsertOneUser","isNullable":false,"outputType":{"isList":false,"type":"User","location":"outputObjectTypes","namespace":"model"},"args":[{"name":"where","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"UserWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"create","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"UserCreateInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"UserUncheckedCreateInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"update","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"UserUpdateInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"UserUncheckedUpdateInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"createManyUser","isNullable":false,"outputType":{"isList":false,"type":"AffectedRowsOutput","location":"outputObjectTypes","namespace":"prisma"},"args":[{"name":"data","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":true,"type":"UserCreateManyInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"skipDuplicates","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"deleteOneUser","isNullable":true,"outputType":{"isList":false,"type":"User","location":"outputObjectTypes","namespace":"model"},"args":[{"name":"where","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"UserWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"updateOneUser","isNullable":true,"outputType":{"isList":false,"type":"User","location":"outputObjectTypes","namespace":"model"},"args":[{"name":"data","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"UserUpdateInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"UserUncheckedUpdateInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"where","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"UserWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"updateManyUser","isNullable":false,"outputType":{"isList":false,"type":"AffectedRowsOutput","location":"outputObjectTypes","namespace":"prisma"},"args":[{"name":"data","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"UserUpdateManyMutationInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"UserUncheckedUpdateManyInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"where","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"deleteManyUser","isNullable":false,"outputType":{"isList":false,"type":"AffectedRowsOutput","location":"outputObjectTypes","namespace":"prisma"},"args":[{"name":"where","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"UserWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"createOneTask","isNullable":false,"outputType":{"isList":false,"type":"Task","location":"outputObjectTypes","namespace":"model"},"args":[{"name":"data","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"TaskCreateInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"TaskUncheckedCreateInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"upsertOneTask","isNullable":false,"outputType":{"isList":false,"type":"Task","location":"outputObjectTypes","namespace":"model"},"args":[{"name":"where","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"create","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"TaskCreateInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"TaskUncheckedCreateInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"update","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"TaskUpdateInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"TaskUncheckedUpdateInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"createManyTask","isNullable":false,"outputType":{"isList":false,"type":"AffectedRowsOutput","location":"outputObjectTypes","namespace":"prisma"},"args":[{"name":"data","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":true,"type":"TaskCreateManyInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"skipDuplicates","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Boolean","location":"scalar","namespace":null}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"deleteOneTask","isNullable":true,"outputType":{"isList":false,"type":"Task","location":"outputObjectTypes","namespace":"model"},"args":[{"name":"where","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"updateOneTask","isNullable":true,"outputType":{"isList":false,"type":"Task","location":"outputObjectTypes","namespace":"model"},"args":[{"name":"data","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"TaskUpdateInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"TaskUncheckedUpdateInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"where","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"TaskWhereUniqueInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"updateManyTask","isNullable":false,"outputType":{"isList":false,"type":"AffectedRowsOutput","location":"outputObjectTypes","namespace":"prisma"},"args":[{"name":"data","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"TaskUpdateManyMutationInput","location":"inputObjectTypes","namespace":"prisma"},{"isList":false,"type":"TaskUncheckedUpdateManyInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null},{"name":"where","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"deleteManyTask","isNullable":false,"outputType":{"isList":false,"type":"AffectedRowsOutput","location":"outputObjectTypes","namespace":"prisma"},"args":[{"name":"where","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"TaskWhereInput","location":"inputObjectTypes","namespace":"prisma"}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"executeRaw","isNullable":false,"outputType":{"isList":false,"type":"Json","location":"scalar","namespace":null},"args":[{"name":"query","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"parameters","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Json","location":"scalar","namespace":null}],"deprecation":null}],"deprecation":null,"documentation":null},{"name":"queryRaw","isNullable":false,"outputType":{"isList":false,"type":"Json","location":"scalar","namespace":null},"args":[{"name":"query","comment":null,"isNullable":false,"isRequired":true,"inputTypes":[{"isList":false,"type":"String","location":"scalar","namespace":null}],"deprecation":null},{"name":"parameters","comment":null,"isNullable":false,"isRequired":false,"inputTypes":[{"isList":false,"type":"Json","location":"scalar","namespace":null}],"deprecation":null}],"deprecation":null,"documentation":null}],"fieldMap":null},{"name":"AggregateUser","fields":[{"name":"_count","isNullable":true,"outputType":{"isList":false,"type":"UserCountAggregateOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[],"deprecation":null,"documentation":null},{"name":"_avg","isNullable":true,"outputType":{"isList":false,"type":"UserAvgAggregateOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[],"deprecation":null,"documentation":null},{"name":"_sum","isNullable":true,"outputType":{"isList":false,"type":"UserSumAggregateOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[],"deprecation":null,"documentation":null},{"name":"_min","isNullable":true,"outputType":{"isList":false,"type":"UserMinAggregateOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[],"deprecation":null,"documentation":null},{"name":"_max","isNullable":true,"outputType":{"isList":false,"type":"UserMaxAggregateOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[],"deprecation":null,"documentation":null}],"fieldMap":null},{"name":"UserGroupByOutputType","fields":[{"name":"id","isNullable":false,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"username","isNullable":false,"outputType":{"isList":false,"type":"String","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"email","isNullable":false,"outputType":{"isList":false,"type":"String","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"password","isNullable":false,"outputType":{"isList":false,"type":"String","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"_count","isNullable":true,"outputType":{"isList":false,"type":"UserCountAggregateOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[],"deprecation":null,"documentation":null},{"name":"_avg","isNullable":true,"outputType":{"isList":false,"type":"UserAvgAggregateOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[],"deprecation":null,"documentation":null},{"name":"_sum","isNullable":true,"outputType":{"isList":false,"type":"UserSumAggregateOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[],"deprecation":null,"documentation":null},{"name":"_min","isNullable":true,"outputType":{"isList":false,"type":"UserMinAggregateOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[],"deprecation":null,"documentation":null},{"name":"_max","isNullable":true,"outputType":{"isList":false,"type":"UserMaxAggregateOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[],"deprecation":null,"documentation":null}],"fieldMap":null},{"name":"AggregateTask","fields":[{"name":"_count","isNullable":true,"outputType":{"isList":false,"type":"TaskCountAggregateOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[],"deprecation":null,"documentation":null},{"name":"_avg","isNullable":true,"outputType":{"isList":false,"type":"TaskAvgAggregateOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[],"deprecation":null,"documentation":null},{"name":"_sum","isNullable":true,"outputType":{"isList":false,"type":"TaskSumAggregateOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[],"deprecation":null,"documentation":null},{"name":"_min","isNullable":true,"outputType":{"isList":false,"type":"TaskMinAggregateOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[],"deprecation":null,"documentation":null},{"name":"_max","isNullable":true,"outputType":{"isList":false,"type":"TaskMaxAggregateOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[],"deprecation":null,"documentation":null}],"fieldMap":null},{"name":"TaskGroupByOutputType","fields":[{"name":"id","isNullable":false,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"title","isNullable":false,"outputType":{"isList":false,"type":"String","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"description","isNullable":false,"outputType":{"isList":false,"type":"String","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"completed","isNullable":false,"outputType":{"isList":false,"type":"Boolean","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"createdAt","isNullable":false,"outputType":{"isList":false,"type":"DateTime","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"updatedAt","isNullable":false,"outputType":{"isList":false,"type":"DateTime","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"userId","isNullable":false,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"_count","isNullable":true,"outputType":{"isList":false,"type":"TaskCountAggregateOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[],"deprecation":null,"documentation":null},{"name":"_avg","isNullable":true,"outputType":{"isList":false,"type":"TaskAvgAggregateOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[],"deprecation":null,"documentation":null},{"name":"_sum","isNullable":true,"outputType":{"isList":false,"type":"TaskSumAggregateOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[],"deprecation":null,"documentation":null},{"name":"_min","isNullable":true,"outputType":{"isList":false,"type":"TaskMinAggregateOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[],"deprecation":null,"documentation":null},{"name":"_max","isNullable":true,"outputType":{"isList":false,"type":"TaskMaxAggregateOutputType","location":"outputObjectTypes","namespace":"prisma"},"args":[],"deprecation":null,"documentation":null}],"fieldMap":null},{"name":"AffectedRowsOutput","fields":[{"name":"count","isNullable":false,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null}],"fieldMap":null},{"name":"UserCountOutputType","fields":[{"name":"tasks","isNullable":false,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null}],"fieldMap":null},{"name":"UserCountAggregateOutputType","fields":[{"name":"id","isNullable":false,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"username","isNullable":false,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"email","isNullable":false,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"password","isNullable":false,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"_all","isNullable":false,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null}],"fieldMap":null},{"name":"UserAvgAggregateOutputType","fields":[{"name":"id","isNullable":true,"outputType":{"isList":false,"type":"Float","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null}],"fieldMap":null},{"name":"UserSumAggregateOutputType","fields":[{"name":"id","isNullable":true,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null}],"fieldMap":null},{"name":"UserMinAggregateOutputType","fields":[{"name":"id","isNullable":true,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"username","isNullable":true,"outputType":{"isList":false,"type":"String","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"email","isNullable":true,"outputType":{"isList":false,"type":"String","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"password","isNullable":true,"outputType":{"isList":false,"type":"String","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null}],"fieldMap":null},{"name":"UserMaxAggregateOutputType","fields":[{"name":"id","isNullable":true,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"username","isNullable":true,"outputType":{"isList":false,"type":"String","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"email","isNullable":true,"outputType":{"isList":false,"type":"String","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"password","isNullable":true,"outputType":{"isList":false,"type":"String","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null}],"fieldMap":null},{"name":"TaskCountAggregateOutputType","fields":[{"name":"id","isNullable":false,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"title","isNullable":false,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"description","isNullable":false,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"completed","isNullable":false,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"createdAt","isNullable":false,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"updatedAt","isNullable":false,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"userId","isNullable":false,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"_all","isNullable":false,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null}],"fieldMap":null},{"name":"TaskAvgAggregateOutputType","fields":[{"name":"id","isNullable":true,"outputType":{"isList":false,"type":"Float","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"userId","isNullable":true,"outputType":{"isList":false,"type":"Float","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null}],"fieldMap":null},{"name":"TaskSumAggregateOutputType","fields":[{"name":"id","isNullable":true,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"userId","isNullable":true,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null}],"fieldMap":null},{"name":"TaskMinAggregateOutputType","fields":[{"name":"id","isNullable":true,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"title","isNullable":true,"outputType":{"isList":false,"type":"String","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"description","isNullable":true,"outputType":{"isList":false,"type":"String","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"completed","isNullable":true,"outputType":{"isList":false,"type":"Boolean","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"createdAt","isNullable":true,"outputType":{"isList":false,"type":"DateTime","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"updatedAt","isNullable":true,"outputType":{"isList":false,"type":"DateTime","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"userId","isNullable":true,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null}],"fieldMap":null},{"name":"TaskMaxAggregateOutputType","fields":[{"name":"id","isNullable":true,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"title","isNullable":true,"outputType":{"isList":false,"type":"String","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"description","isNullable":true,"outputType":{"isList":false,"type":"String","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"completed","isNullable":true,"outputType":{"isList":false,"type":"Boolean","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"createdAt","isNullable":true,"outputType":{"isList":false,"type":"DateTime","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"updatedAt","isNullable":true,"outputType":{"isList":false,"type":"DateTime","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null},{"name":"userId","isNullable":true,"outputType":{"isList":false,"type":"Int","location":"scalar","namespace":null},"args":[],"deprecation":null,"documentation":null}],"fieldMap":null}]},"enumTypes":{"model":null,"prisma":[{"name":"SortOrder","values":["asc","desc"]},{"name":"TaskScalarFieldEnum","values":["id","title","description","completed","createdAt","updatedAt","userId"]},{"name":"TransactionIsolationLevel","values":["ReadUncommitted","ReadCommitted","RepeatableRead","Serializable"]},{"name":"UserScalarFieldEnum","values":["id","username","email","password"]}]}},"mappings":{"modelOperations":[{"model":"User","findUnique":"findUniqueUser","findFirst":"findFirstUser","findMany":"findManyUser","create":"createOneUser","createMany":"createManyUser","update":"updateOneUser","updateMany":"updateManyUser","upsert":"upsertOneUser","delete":"deleteOneUser","deleteMany":"deleteManyUser","aggregate":"aggregateUser","groupBy":"groupByUser","findRaw":null,"aggregateRaw":null},{"model":"Task","findUnique":"findUniqueTask","findFirst":"findFirstTask","findMany":"findManyTask","create":"createOneTask","createMany":"createManyTask","update":"updateOneTask","updateMany":"updateManyTask","upsert":"upsertOneTask","delete":"deleteOneTask","deleteMany":"deleteManyTask","aggregate":"aggregateTask","groupBy":"groupByTask","findRaw":null,"aggregateRaw":null}],"otherOperations":{"read":[],"write":["executeRaw","queryRaw"]}}}';
 
 /// Prisma schema DMMF.
-final dmmf.Document _dmmf = dmmf.Document.fromJson(convert.json.decode(_dmmfStr));
+final dmmf.Document _dmmf = dmmf.Document.fromJson(convert.json.decode(_dmmfStr) as Map<String, dynamic>);
 
 /// Prisma query engine executable.
-const String _executable = 'C:\Users\kylej\Desktop\noelson\chall\Tasks\backend\tasks\.dart_tool\prisma\query-engine';
+const String _executable = 'C:UserskylejDesktop\noelsonchallTasks\backend\tasks.dart_toolprismaquery-engine';
 
 /// Prisma schema as string.
-final String _schema = "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\ngenerator client {\n  provider        = \"prisma-client-dart\"\n  previewFeatures = [\"interactiveTransactions\"]\n  binaryTargets = [\"native\", \"debian-openssl-1.1.x\"]\n}\n\ndatasource db {\n  provider = \"mysql\"\n  url      = \"mysql://noel:12345678@localhost:3306/tasks_db\"\n}\n\nmodel User {\n  id       Int    @id @default(autoincrement())\n  username String\n  email    String @unique\n  password String\n  tasks    Task[] @relation(\"UserTasks\")\n}\n\nmodel Task {\n  id          Int      @id @default(autoincrement())\n  title       String\n  description String\n  completed   Boolean  @default(false)\n  createdAt   DateTime @default(now())\n  updatedAt   DateTime @updatedAt\n  userId      Int\n  user        User     @relation(\"UserTasks\", fields: [userId], references: [id])\n}\n";
+const String _schema = '// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\ngenerator client {\n  provider        = "prisma-client-dart"\n  previewFeatures = ["interactiveTransactions"]\n  binaryTargets = ["native", "debian-openssl-1.1.x"]\n}\n\ndatasource db {\n  provider = "mysql"\n  url      = "mysql://noel:12345678@localhost:3306/tasks_db"\n}\n\nmodel User {\n  id       Int    @id @default(autoincrement())\n  username String\n  email    String @unique\n  password String\n  tasks    Task[] @relation("UserTasks")\n}\n\nmodel Task {\n  id          Int      @id @default(autoincrement())\n  title       String\n  description String\n  completed   Boolean  @default(false)\n  createdAt   DateTime @default(now())\n  updatedAt   DateTime @updatedAt\n  userId      Int\n  user        User     @relation("UserTasks", fields: [userId], references: [id])\n}\n';
 
 class Datasources {
-  final runtime.Datasource? db;
 
 
 
     const Datasources({
     this.db
   });
+  final runtime.Datasource? db;
 
 
   Map<String, runtime.Datasource> toOverwrites() => <String, runtime.Datasource>{
         if (db != null)
-        'db': db!
+        'db': db!,
     
 };
 
@@ -4186,8 +4116,6 @@ class Datasources {
 
 /// Prisma client.
 class PrismaClient {
-  final runtime.Engine _engine;
-  final runtime.QueryEngineRequestHeaders? _headers;
 
   const PrismaClient._(this._engine, this._headers);
 
@@ -4205,6 +4133,8 @@ class PrismaClient {
 
     return PrismaClient._(engine, null);
   }
+  final runtime.Engine _engine;
+  final runtime.QueryEngineRequestHeaders? _headers;
 
   /// Connect client to database.
   Future<void> $connect() => _engine.start();
@@ -4228,15 +4158,15 @@ class PrismaClient {
     if (_headers?.transactionId != null) return handler(this);
 
     // Create transcation common headers.
-    final runtime.TransactionHeaders headers = runtime.TransactionHeaders();
+    const headers = runtime.TransactionHeaders();
 
     // Request transaction info, Start transaction.
-    final runtime.TransactionInfo info = await _engine.startTransaction(
-      headers: headers
+    final info = await _engine.startTransaction(
+      headers: headers,
     );
 
     // Create new client with transaction headers.
-    final PrismaClient transactionClient = PrismaClient._(
+    final transactionClient = PrismaClient._(
       _engine,
       runtime.QueryEngineRequestHeaders(transactionId: info.id),
     );
@@ -4245,7 +4175,7 @@ class PrismaClient {
       return handler(transactionClient).then<T>((T value) async {
         await _engine.commitTransaction(
           headers: headers,
-          info: info
+          info: info,
         );
 
         return value;
@@ -4253,7 +4183,7 @@ class PrismaClient {
     } catch (e) {
       await _engine.rollbackTransaction(
         headers: headers,
-        info: info
+        info: info,
       );
       rethrow;
     }
@@ -4262,14 +4192,14 @@ class PrismaClient {
   /// User model delegate.
 UserDelegate get user => UserDelegate(
   engine: _engine,
-  headers: _headers
+  headers: _headers,
 );
 
 
 /// Task model delegate.
 TaskDelegate get task => TaskDelegate(
   engine: _engine,
-  headers: _headers
+  headers: _headers,
 );
 
 
